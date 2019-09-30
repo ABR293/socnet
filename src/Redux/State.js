@@ -1,6 +1,6 @@
 import {rerenderEntireTree} from './../Render'
 
-//NEW TEST FOR GIT COMMENT 1
+
 
 let StateData = {
    dialogs: [
