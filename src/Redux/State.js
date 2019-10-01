@@ -38,7 +38,7 @@ let state = {
     ],
     profile: [
 
-        {id:8327178, name: 'ADMIN!!', avatar: '3', posts:[
+        {id:8327178, name: 'ADMIN!!', avatar: '3', PostText: '', posts:[
                 {id: 34522, name:'sdsadas', message: "wfghcsfbzvddafvldmkvale;dkgjeg"},
                 {id: 37867, name:'rewe', message: "wthtbvsdrtarsteale;dkgjeg"},
                 {id: 45452, name:'sdsadas', message: "wfksadaifgyit7iyujvbcbrqergsdfkjsaldmkvale;dkgjeg"},
@@ -59,9 +59,13 @@ let state = {
         message: message,
     };
 
-    state.profile[0].posts.push(NewPost);
+    state.profile[0].posts.unshift(NewPost);
     rerenderEntireTree(state);
 } ;
 
+ export let changePostText = (text) =>{
+     state.profile[0].PostText = text;
+     rerenderEntireTree(state);
+ };
 
 export default state;
