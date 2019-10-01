@@ -2,7 +2,7 @@ import {rerenderEntireTree} from './../Render'
 
 
 
-let StateData = {
+let state = {
    dialogs: [
         {id: 12345, name:'dimon',  messages: [
                 {avatar: 1, text: 'adsbnvnvnvad', activity: true},
@@ -59,9 +59,9 @@ let StateData = {
         message: message,
     };
 
-    StateData.profile[0].posts.push(NewPost);
-    //rerenderEntireTree(this.StateData, this.addPost());
+    state.profile[0].posts.push(NewPost);
+    rerenderEntireTree(state);
 } ;
 
 
-export default StateData;
+export default state;
