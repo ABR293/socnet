@@ -1,4 +1,7 @@
-import {rerenderEntireTree} from './../Render'
+let rerenderEntireTree = () =>{
+    console.log('Change');
+};
+
 
 
 
@@ -51,7 +54,7 @@ let state = {
 
 //rerenderEntireTree();
 
- export let addPost = (message) =>{
+ export const addPost = (message) =>{
 
     let NewPost = {
         id: 89080,
@@ -60,12 +63,17 @@ let state = {
     };
 
     state.profile[0].posts.unshift(NewPost);
-    rerenderEntireTree(state);
+    rerenderEntireTree();
 } ;
 
- export let changePostText = (text) =>{
+ export const changePostText = (text) =>{
      state.profile[0].PostText = text;
-     rerenderEntireTree(state);
+     rerenderEntireTree();
+ };
+
+
+ export const subscribe = (observer)=> {
+     rerenderEntireTree = observer;
  };
 
 export default state;
