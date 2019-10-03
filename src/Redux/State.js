@@ -61,26 +61,39 @@ let store = {
         ],
     },
 
+    getState() {
+        return (this._state);
+    },
+
     addPost(message) {
         let NewPost = {
             id: 89080,
             name: 'Vaso',
             message: message,
         };
-    },
-    changePostText (text) {
-        state.profile[0].PostText = text;
+
+        this._state.profile[0].posts.unshift(NewPost);
         rerenderEntireTree();
     },
 
+    changePostText (text) {
+        this._state.profile[0].PostText = text;
+        rerenderEntireTree();
+    },
     subscribe (observer) {
         rerenderEntireTree = observer;
     }
 
 };
-
+store.subscribe(rerenderEntireTree);
 window.store = store;
 
+export default store;
+
+
+// Старый state для обращений
+
+/*
 let state = {
    dialogs: [
         {id: 12345, name:'dimon',  messages: [
@@ -127,8 +140,6 @@ let state = {
     ],
 
 };
-
-
  export const addPost = (message) =>{
 
     let NewPost = {
@@ -140,15 +151,11 @@ let state = {
     state.profile[0].posts.unshift(NewPost);
     rerenderEntireTree();
 } ;
-
  export const changePostText = (text) =>{
      state.profile[0].PostText = text;
      rerenderEntireTree();
  };
-
-
  export const subscribe = (observer)=> {
      rerenderEntireTree = observer;
  };
-
-export default state;
+//export default state;*/
