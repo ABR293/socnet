@@ -16,8 +16,7 @@ export default class App extends Component {
             <Navbar/>
 
             <Content state={this.props.state}
-                     addPost={this.props.addPost}
-                     changePostText={this.props.changePostText}/>
+                     dispatch={this.props.dispatch}/>
             <Footer/>
             </div>
 

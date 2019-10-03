@@ -22,14 +22,17 @@ export default class Profile extends Component {
 
         let newPostText = React.createRef();
         let AddNewPost = () => {
-          let text = this.props.profile[0].PostText;
-          this.props.addPost(text);
-          this.props.changePostText('');
+            let text = this.props.profile[0].PostText;
+            this.props.dispatch({type: "ADD-POST", message: text});
+            this.props.dispatch({type: "CHANGE-TEXT", text: ''});
+            //this.props.addPost(text);
+            //this.props.changePostText('');
         };
 
         let onPostChange = ()=>{
             let text = newPostText.current.value;
-            this.props.changePostText(text);
+            this.props.dispatch({type: "CHANGE-TEXT", text: text});
+            //this.props.changePostText(text);
             console.log(text);
 
         };

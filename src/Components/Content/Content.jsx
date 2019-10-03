@@ -19,8 +19,7 @@ export default class Content extends Component {
                 <div className={style.content}>
                     <Route path='/dialogs' component={() => <Dialogs dialogs={this.props.state.dialogs}/>} />
                     <Route path='/profile' component={() => <Profile profile={this.props.state.profile}
-                                                                     addPost={this.props.addPost}
-                                                                     changePostText={this.props.changePostText}
+                                                                     dispatch={this.props.dispatch}
                     />}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
