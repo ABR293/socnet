@@ -1,6 +1,21 @@
+
+const ADD_POST = "ADD-POST";
+const CHANGE_TEXT = "CHANGE-TEXT";
+
+
+
 let rerenderEntireTree = () =>{
     console.log('Change');
 };
+
+export let addPostCreator = (message) => ({type: ADD_POST, message: message });
+export let changeTextCreator = (text) => ({type: CHANGE_TEXT, text: text });
+
+
+
+
+
+
 
 let store = {
 
@@ -66,7 +81,7 @@ let store = {
     },
 
     dispatch(action) {
-        if(action.type === "ADD-POST"){
+        if(action.type ===  ADD_POST){
             let NewPost = {
                 id: 89080,
                 name: 'Vaso',
@@ -75,34 +90,15 @@ let store = {
             this._state.profile[0].posts.unshift(NewPost);
             rerenderEntireTree();
 
-        } else if (action.type === "CHANGE-TEXT"){
+        } else if (action.type === CHANGE_TEXT){
             this._state.profile[0].PostText = action.text;
             rerenderEntireTree();
         } else {console.log("OOO!!!")}
 
     },
-
-
-
-    addPost(message) {
-        let NewPost = {
-            id: 89080,
-            name: 'Vaso',
-            message: message,
-        };
-
-        this._state.profile[0].posts.unshift(NewPost);
-        rerenderEntireTree();
-    },
-
-    changePostText (text) {
-        this._state.profile[0].PostText = text;
-        rerenderEntireTree();
-    },
     subscribe (observer) {
         rerenderEntireTree = observer;
     }
-
 };
 store.subscribe(rerenderEntireTree);
 window.store = store;

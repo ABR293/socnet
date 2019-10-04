@@ -10,7 +10,6 @@ import Music from "./Music";
 
 export default class Content extends Component {
     render() {
-        //this.props.addPost('URA!!! URAAeeeee!! URA!!!');
 
 
         return (

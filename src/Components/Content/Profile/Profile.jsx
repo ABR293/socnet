@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import style from './Profile.module.css';
 import Post from './Post';
+import {addPostCreator, changeTextCreator} from "../../../Redux/State";
 
 
 
@@ -23,15 +24,15 @@ export default class Profile extends Component {
         let newPostText = React.createRef();
         let AddNewPost = () => {
             let text = this.props.profile[0].PostText;
-            this.props.dispatch({type: "ADD-POST", message: text});
-            this.props.dispatch({type: "CHANGE-TEXT", text: ''});
+            this.props.dispatch(addPostCreator(text));
+            this.props.dispatch(changeTextCreator(''));
             //this.props.addPost(text);
             //this.props.changePostText('');
         };
 
         let onPostChange = ()=>{
             let text = newPostText.current.value;
-            this.props.dispatch({type: "CHANGE-TEXT", text: text});
+            this.props.dispatch(changeTextCreator(text));
             //this.props.changePostText(text);
             console.log(text);
 
