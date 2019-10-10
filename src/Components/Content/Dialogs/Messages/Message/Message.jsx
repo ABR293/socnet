@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import style from './Message.module.css';
-import {timeout} from "q";
+
 
 export default class Message extends Component {
     render() {

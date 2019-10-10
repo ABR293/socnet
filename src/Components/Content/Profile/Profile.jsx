@@ -43,12 +43,22 @@ export default class Profile extends Component {
 
             <div>
                 <div className={style.info}>
-                    <img className={style.avatar} src={require("./s111200.png")} alt="NICHT AVATAREN!!!"/>
+                    <img className={style.avatar}
+                         src={require("./s111200.png")}
+                         alt="NICHT AVATAREN!!!"/>
                     <h1 className={style.name}>{this.props.profile[0].name}</h1>
                 </div>
                 <div className={style.newPost}>
-                    <textarea autoFocus={true} ref={newPostText} onChange={onPostChange} className={style.newPost__inputblock} value={this.props.profile[0].PostText}/>
-                    <button onClick={AddNewPost} className={style.newPost__add}>Add Post</button>
+                    <textarea
+                        ref={newPostText}
+                        onChange={onPostChange}
+                        className={style.newPost__inputblock}
+                        value={this.props.profile[0].PostText}/>
+                    <button
+                        onClick={AddNewPost}
+                        className={style.newPost__add}>
+                        Add Post
+                    </button>
                 </div>
                 <div className='3'>
                     {Posts}

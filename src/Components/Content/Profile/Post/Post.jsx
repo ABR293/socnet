@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import style from './Post.module.css';
-import img1 from './Av2.jpg';
 
 
 export default class Post extends Component {
