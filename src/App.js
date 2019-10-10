@@ -7,21 +7,19 @@ import Content from './Components/Content';
 
 
 
-export default class App extends Component {
-    render(){
-
+const  App = (props) => {
         return (
             <div className = 'app'>
             <Header/>
             <Navbar/>
 
-            <Content state={this.props.state}
-                     dispatch={this.props.dispatch}/>
+            <Content state={props.state}
+                     dispatch={props.dispatch}/>
             <Footer/>
             </div>
 
 
         )
-    }
-}
+    };
+export default App
 

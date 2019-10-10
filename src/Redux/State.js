@@ -1,5 +1,5 @@
-import {ProfileReducer} from "./ProfileReducer";
-import {DialogsReducer} from "./DialogReducer";
+import {profileReducer} from "./ProfileReducer";
+import {dialogsReducer} from "./DialogReducer";
 
 const ADD_POST = "ADD-POST";
 const CHANGE_POST_TEXT = "CHANGE-POST-TEXT";
@@ -84,8 +84,8 @@ let store = {
     },
 
     dispatch(action) {
-        this._state.profilePage = ProfileReducer(this._state.profilePage, action);
-        this._state.dialogsPage = DialogsReducer(this._state.dialogsPage, action);
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage =dialogsReducer(this._state.dialogsPage, action);
         rerenderEntireTree();
 
 

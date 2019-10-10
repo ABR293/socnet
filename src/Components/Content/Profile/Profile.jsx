@@ -6,17 +6,8 @@ import {addPostCreator, changeTextCreator} from "../../../Redux/State";
 
 
 
-export default class Profile extends Component {
-    render() {
-
-        //this.props.addPost('URA!!! URAAeeeee!! URA!!!');
-
-
-
-
-        console.log(this.props.profile.PostText);
-
-        let Posts = this.props.profile.posts.map((post) =>{
+const Profile = (props) => {
+        let Posts = props.profile.posts.map((post) =>{
             return(
                 <Post text={post.message}/>
             );
@@ -24,18 +15,18 @@ export default class Profile extends Component {
 
         let newPostText = React.createRef();
         let AddNewPost = () => {
-            let text = this.props.profile.PostText;
-            this.props.dispatch(addPostCreator(text));
-            this.props.dispatch(changeTextCreator(''));
-            //this.props.addPost(text);
-            //this.props.changePostText('');
+            let text = props.profile.PostText;
+            props.dispatch(addPostCreator(text));
+            props.dispatch(changeTextCreator(''));
+            //props.addPost(text);
+            //props.changePostText('');
         };
 
         let onPostChange = ()=>{
             let text = newPostText.current.value;
-            this.props.dispatch(changeTextCreator(text));
-            //this.props.changePostText(text);
-            console.log(this.props.profile.PostText);
+            props.dispatch(changeTextCreator(text));
+            //props.changePostText(text);
+            console.log(props.profile.PostText);
 
         };
 
@@ -46,14 +37,14 @@ export default class Profile extends Component {
                 <div className={style.info}>
                     <img className={style.avatar}
                          src={require("./s111200.png")} alt="NICHT AVATAREN!!!"/>
-                    <h1 className={style.name}>{this.props.profile.name}</h1>
+                    <h1 className={style.name}>{props.profile.name}</h1>
                 </div>
                 <div className={style.newPost}>
                     <textarea
                         ref={newPostText}
                         onChange={onPostChange}
                         className={style.newPost__inputblock}
-                        value={this.props.profile.PostText}
+                        value={props.profile.PostText}
 
 
                     />
@@ -69,5 +60,6 @@ export default class Profile extends Component {
                 </div>
             </div>
         )
-    }
-}
+
+};
+export default Profile;

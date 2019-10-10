@@ -6,15 +6,14 @@ import Messages from "./Messages";
 import {changeMessageTextCreator, SendMessageCreator} from "../../../Redux/State";
 
 
-export default class Dialogs extends Component {
-    render() {
-        let Adress = this.props.dialogs.messageData.map( (el)=>{
+const Dialogs = (props) => {
+        let Adress = props.dialogs.messageData.map( (el)=>{
             return(
                 <Contact name={el.name}  id={el.id}/>
                 )
             }
         );
-        let Messedges = this.props.dialogs.messageData.map( (el)=>{
+        let Messedges = props.dialogs.messageData.map( (el)=>{
                 return(
                     <Route path={'/dialogs/'+ el.id}
                            render={() => <Messages messages={el.messages}/>}/>
@@ -25,12 +24,12 @@ export default class Dialogs extends Component {
         let newMessageText = React.createRef();
         let sendMessage = () => {
             let text = newMessageText.current.value;
-            this.props.dispatch(SendMessageCreator(text));
-            this.props.dispatch(changeMessageTextCreator(''));
+            props.dispatch(SendMessageCreator(text));
+            props.dispatch(changeMessageTextCreator(''));
         };
         let onMessageTextChange = () => {
             let text = newMessageText.current.value;
-            this.props.dispatch(changeMessageTextCreator(text));
+            props.dispatch(changeMessageTextCreator(text));
             console.log(text);
         };
         return (
@@ -60,7 +59,7 @@ export default class Dialogs extends Component {
             </div>
 
 
-        )
-    }
-}
+        );
+};
+export default Dialogs;
 
