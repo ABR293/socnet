@@ -1,7 +1,5 @@
 import React from 'react';
 import * as serviceWorker from './serviceWorker';
-import state, {addPost, changePostText} from './Redux/Store';
-import {subscribe} from "./Redux/State";
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
@@ -18,7 +16,7 @@ export let rerenderEntireTree = () =>{
 };
 
 
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
 
 
 store.subscribe(rerenderEntireTree);

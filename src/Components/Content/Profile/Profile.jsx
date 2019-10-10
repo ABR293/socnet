@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import style from './Profile.module.css';
 import Post from './Post';
 import {addPostCreator, changeTextCreator} from "../../../Redux/State";

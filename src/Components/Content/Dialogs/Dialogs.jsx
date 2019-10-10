@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import style from './Dialogs.module.css';
 import Contact from "./Contact";
 import {Route} from 'react-router-dom';
