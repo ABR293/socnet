@@ -1,34 +1,19 @@
 import React from 'react';
 import style from './Profile.module.css';
 import Post from './Post';
-import {addPostCreator, changeTextCreator} from "../../../Redux/State";
 
 
 
 
 const Profile = (props) => {
-        let Posts = props.profile.posts.map((post) =>{
+        let Posts = props.posts.map((post) =>{
             return(
                 <Post text={post.message}/>
             );
         });
 
         let newPostText = React.createRef();
-        let AddNewPost = () => {
-            let text = props.profile.PostText;
-            props.dispatch(addPostCreator(text));
-            props.dispatch(changeTextCreator(''));
-            //props.addPost(text);
-            //props.changePostText('');
-        };
-
-        let onPostChange = ()=>{
-            let text = newPostText.current.value;
-            props.dispatch(changeTextCreator(text));
-            //props.changePostText(text);
-            console.log(props.profile.PostText);
-
-        };
+        let text = props.PostText;
 
         return (
 
@@ -37,20 +22,17 @@ const Profile = (props) => {
                 <div className={style.info}>
                     <img className={style.avatar}
                          src={require("./s111200.png")} alt="NICHT AVATAREN!!!"/>
-                    <h1 className={style.name}>{props.profile.name}</h1>
+                    <h1 className={style.name}>{props.name}</h1>
                 </div>
                 <div className={style.newPost}>
                     <textarea
                         ref={newPostText}
-                        onChange={onPostChange}
+                        onChange={() => {let text = newPostText.current.value; props.changePostText(text);}}
                         className={style.newPost__inputblock}
-                        value={props.profile.PostText}
-
-
-                    />
+                        value={props.PostText}/>
 
                     <button
-                        onClick={AddNewPost}
+                        onClick={() =>  {props.addNewPost(text)}}
                         className={style.newPost__add}>
                         Add Post
                     </button>

@@ -13,8 +13,10 @@ const  App = (props) => {
             <Header/>
             <Navbar/>
 
-            <Content state={props.state}
-                     dispatch={props.dispatch}/>
+            <Content
+                store={props.store}
+                state={props.state}
+                dispatch={props.dispatch}/>
             <Footer/>
             </div>
 

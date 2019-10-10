@@ -6,6 +6,7 @@ import Profile from "./Profile";
 import Settings from "./Settings";
 import News from "./News";
 import Music from "./Music";
+import ProfileConteiner from "./Profile/ProfileConteiner";
 
 
 const Content =  (props) => {
@@ -18,7 +19,8 @@ const Content =  (props) => {
                            />}
                     />
                     <Route path='/profile'
-                           render={() => <Profile
+                           render={() => <ProfileConteiner
+                               store={props.store}
                                profile={props.state.profilePage}
                                dispatch={props.dispatch}
                            />}
