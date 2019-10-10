@@ -1,3 +1,5 @@
+import {ProfileReducer} from "./ProfileReducer";
+import {DialogsReducer} from "./DialogReducer";
 
 const ADD_POST = "ADD-POST";
 const CHANGE_POST_TEXT = "CHANGE-POST-TEXT";
@@ -20,8 +22,7 @@ export let SendMessageCreator = (message) => ({type: SEND_MESSAGE, message: mess
 let store = {
 
     _state: {
-        dialogsPage:
-            {
+        dialogsPage:{
                 newMessageText: '',
                 messageData:
                     [
@@ -67,9 +68,7 @@ let store = {
                         }
                     ],
             },
-        profilePage: [
-
-            {
+        profilePage: {
                 id: 8327178, name: 'ADMIN!!', avatar: '3', PostText: '', posts: [
                     {id: 34522, name: 'sdsadas', message: "wfghcsfbzvddafvldmkvale;dkgjeg"},
                     {id: 37867, name: 'rewe', message: "wthtbvsdrtarsteale;dkgjeg"},
@@ -77,7 +76,6 @@ let store = {
 
                 ]
             },
-        ],
     },
 
 
@@ -86,24 +84,30 @@ let store = {
     },
 
     dispatch(action) {
-        if(action.type ===  ADD_POST){
-            let NewPost = {
-                id: 89080,
-                name: 'Vaso',
-                message: action.message,
-            };
-            this._state.profilePage[0].posts.unshift(NewPost);
-            rerenderEntireTree();}
-        else if (action.type === CHANGE_POST_TEXT){
-            this._state.profilePage[0].PostText = action.text;
-            rerenderEntireTree();}
-        else if(action.type ===  CHANGE_MESSAGE_TEXT){
-            this._state.dialogsPage.newMessageText = action.text;
-            rerenderEntireTree(); }
-        else if (action.type === SEND_MESSAGE){
-            console.log('You are send message');
-            rerenderEntireTree();}
-        else {console.log("OOO!!!")}
+        this._state.profilePage = ProfileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = DialogsReducer(this._state.dialogsPage, action);
+        rerenderEntireTree();
+
+
+        // if(action.type ===  ADD_POST){
+        //     let NewPost = {
+        //         id: 89080,
+        //         name: 'Vaso',
+        //         message: action.message,
+        //     };
+        //     this._state.profilePage.posts.unshift(NewPost);
+        //     rerenderEntireTree();}
+        // else if (action.type === CHANGE_POST_TEXT){
+        //     this._state.profilePage.PostText = action.text;
+        //     rerenderEntireTree();}
+        // else if(action.type ===  CHANGE_MESSAGE_TEXT){
+        //     this._state.dialogsPage.newMessageText = action.text;
+        //     rerenderEntireTree(); }
+        // else if (action.type === SEND_MESSAGE){
+        //     console.log('You are send message');
+        //     rerenderEntireTree();}
+        // else {console.log("OOO!!!")}
+
 
     },
     subscribe (observer) {
