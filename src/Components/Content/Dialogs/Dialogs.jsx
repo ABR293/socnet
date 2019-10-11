@@ -3,17 +3,16 @@ import style from './Dialogs.module.css';
 import Contact from "./Contact";
 import {Route} from 'react-router-dom';
 import Messages from "./Messages";
-import {changeMessageTextCreator, SendMessageCreator} from "../../../Redux/State";
 
 
 const Dialogs = (props) => {
-        let Adress = props.dialogs.messageData.map( (el)=>{
+        let Adress = props.messageData.map( (el)=>{
             return(
                 <Contact name={el.name}  id={el.id}/>
                 )
             }
         );
-        let Messedges = props.dialogs.messageData.map( (el)=>{
+        let Messedges = props.messageData.map( (el)=>{
                 return(
                     <Route path={'/dialogs/'+ el.id}
                            render={() => <Messages messages={el.messages}/>}/>
@@ -22,18 +21,10 @@ const Dialogs = (props) => {
         );
 
         let newMessageText = React.createRef();
-        let sendMessage = () => {
-            let text = newMessageText.current.value;
-            props.dispatch(SendMessageCreator(text));
-            props.dispatch(changeMessageTextCreator(''));
-        };
-        let onMessageTextChange = () => {
-            let text = newMessageText.current.value;
-            props.dispatch(changeMessageTextCreator(text));
-            console.log(text);
-        };
-        return (
 
+        let text = props.newMessageText;
+
+        return (
             <div className={style.content}>
                 <div className={style.header}>Dialogs</div>
                 <div className={style.dialogs}>
@@ -45,11 +36,11 @@ const Dialogs = (props) => {
                     <div>
                         <textarea className={style.inputblock}
                                   ref={newMessageText}
-                                  onChange={onMessageTextChange}
-                                  //value={}/>
+                                  onChange={() => {let text = newMessageText.current.value; props.messageTextChange(text);}}
+                                  value={props.newMessageText}/>
                             />
                         <button className={style.sendbtn}
-                                onClick={sendMessage}
+                                onClick={() => {props.sendMessage(text)}}
                         >
                             Send message
                         </button>
@@ -57,8 +48,6 @@ const Dialogs = (props) => {
                 </div>
 
             </div>
-
-
         );
 };
 export default Dialogs;

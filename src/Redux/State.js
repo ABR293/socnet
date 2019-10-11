@@ -10,10 +10,7 @@ let rerenderEntireTree = () =>{
     console.log('Change');
 };
 
-export let addPostCreator = (message) => ({type: ADD_POST, message: message });
-export let changeTextCreator = (text) => ({type: CHANGE_POST_TEXT, text: text });
-export let changeMessageTextCreator = (text) => ({type: CHANGE_MESSAGE_TEXT, message: text });
-export let SendMessageCreator = (message) => ({type: SEND_MESSAGE, message: message });
+
 
 
 

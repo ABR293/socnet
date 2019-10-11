@@ -7,22 +7,22 @@ import Settings from "./Settings";
 import News from "./News";
 import Music from "./Music";
 import ProfileConteiner from "./Profile/ProfileConteiner";
+import DialogsConteiner from "./Dialogs/DialogsConteinet";
 
 
 const Content =  (props) => {
         return (
                 <div className={style.content}>
                     <Route path='/dialogs'
-                           render={() => <Dialogs
-                               dialogs={props.state.dialogsPage}
-                               dispatch={props.dispatch}
+                           render={() => <DialogsConteiner
+                               store={props.store}
+                               // dialogs={props.state.dialogsPage}
+
                            />}
                     />
                     <Route path='/profile'
                            render={() => <ProfileConteiner
                                store={props.store}
-                               profile={props.state.profilePage}
-                               dispatch={props.dispatch}
                            />}
                     />
                     <Route path='/news' render={News}/>
