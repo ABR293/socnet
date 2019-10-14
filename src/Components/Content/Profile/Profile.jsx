@@ -15,6 +15,7 @@ const Profile = (props) => {
         let newPostText = React.createRef();
         let text = props.PostText;
 
+
         return (
 
 

@@ -38,7 +38,7 @@ const Dialogs = (props) => {
                                   ref={newMessageText}
                                   onChange={() => {let text = newMessageText.current.value; props.messageTextChange(text);}}
                                   value={props.newMessageText}/>
-                            />
+
                         <button className={style.sendbtn}
                                 onClick={() => {props.sendMessage(text)}}
                         >
