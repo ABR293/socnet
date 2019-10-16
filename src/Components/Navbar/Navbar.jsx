@@ -13,6 +13,7 @@ export default class Navbar extends Component {
                     <li><NavLink to="/news" activeClassName={style.activeLink}>News</NavLink></li>
                     <li><NavLink to="/music" activeClassName={style.activeLink}>Music</NavLink></li>
                     <li><NavLink to="/settings" activeClassName={style.activeLink}>Settings</NavLink></li>
+                    <li><NavLink to="/users" activeClassName={style.activeLink}>Users</NavLink></li>
                 </ul>
             </nav>
         )
