@@ -8,7 +8,7 @@ import Post from './Post';
 const Profile = (props) => {
         let Posts = props.posts.map((post) =>{
             return(
-                <Post text={post.message}/>
+                <Post key={post.id} text={post.message}/>
             );
         });
 

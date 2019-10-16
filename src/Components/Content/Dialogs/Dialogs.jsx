@@ -8,13 +8,13 @@ import Messages from "./Messages";
 const Dialogs = (props) => {
         let Adress = props.messageData.map( (el)=>{
             return(
-                <Contact name={el.name}  id={el.id}/>
+                <Contact name={el.name}  id={el.id} key={el.id}/>
                 )
             }
         );
         let Messedges = props.messageData.map( (el)=>{
                 return(
-                    <Route path={'/dialogs/'+ el.id}
+                    <Route path={'/dialogs/'+ el.id} key={el.id}
                            render={() => <Messages messages={el.messages}/>}/>
                 )
             }

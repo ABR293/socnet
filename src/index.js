@@ -20,9 +20,6 @@ export let rerenderEntireTree = () => {
 
 rerenderEntireTree(store.getState());
 
-
-store.subscribe(rerenderEntireTree);
-
 //ReactDOM.render(<BrowserRouter><App state={stateData} addPost={addPost}/></BrowserRouter>,document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

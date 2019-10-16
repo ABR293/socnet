@@ -8,7 +8,7 @@ export default class Messages extends Component {
 
         let MessageElement = this.props.messages.map((el)=> {
             return(
-                <Message avatar={el.avatar} text={el.text} activity={el.activity}/>
+                <Message avatar={el.avatar} key={el.id} text={el.text} activity={el.activity}/>
             );
         });
 
