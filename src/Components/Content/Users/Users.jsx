@@ -3,7 +3,6 @@ import style from "./Users.module.css";
 
 
 let Users = (props) => {
-    console.log(props);
     return (
         <div>
             <div className={style.pageblock}>
