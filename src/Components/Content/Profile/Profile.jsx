@@ -28,12 +28,12 @@ const Profile = (props) => {
                 <div className={style.newPost}>
                     <textarea
                         ref={newPostText}
-                        onChange={() => {let text = newPostText.current.value; props.changePostText(text);}}
+                        onChange={() => {let text = newPostText.current.value; props.changeText(text);}}
                         className={style.newPost__inputblock}
                         value={props.PostText}/>
 
                     <button
-                        onClick={() =>  {props.addNewPost(text)}}
+                        onClick={() =>  {props.addPost(text)}}
                         className={style.newPost__add}>
                         Add Post
                     </button>
