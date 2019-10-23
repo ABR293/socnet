@@ -16,7 +16,6 @@ const Profile = (props) => {
         let newPostText = React.createRef();
         let text = props.PostText;
 
-        console.log(props.avatar);
         return (
 
 
