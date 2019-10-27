@@ -1,9 +1,14 @@
 import React from 'react';
 import style from "./Users.module.css";
 import {NavLink} from "react-router-dom";
+import {userAPI} from "../../../API/API";
+
 
 
 let Users = (props) => {
+    console.log(props);
+    console.log(props.followingInProgress);
+
     return (
         <div>
             <div className={style.pageblock}>
@@ -24,18 +29,36 @@ let Users = (props) => {
                     props.users.map((user) =>
                         <div key={user.id} className={style.userBlock}>
                             <div className={style.avatarBlock}>
-                                <NavLink to={'/profile/'+ user.id}>
-                                <img className={style.avatar}
-                                     src={user.photos.small != null ?
-                                          user.photos.small : props.fixSrc}
-                                     alt=""/>
+                                <NavLink to={'/profile/' + user.id}>
+                                    <img className={style.avatar}
+                                         src={user.photos.small != null ?
+                                             user.photos.small : props.fixSrc}
+                                         alt=""/>
                                 </NavLink>
                                 {user.followed
-                                    ? <button onClick={() => {
-                                        props.unfollow(user.id)
+                                    ? <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
+                                        props.followingInProgress(true, user.id);
+                                        userAPI.unfollowUser(user.id)
+                                            .then(data => {
+                                                if (data.resultCode === 0) {
+                                                    props.unfollow(user.id)
+                                                }
+                                                props.followingInProgress(false, user.id);
+                                            });
+
                                     }}>UnFollow</button>
-                                    : <button onClick={() => {
-                                        props.follow(user.id)
+
+                                    : <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
+                                        props.followingInProgress(true, user.id);
+                                        userAPI.followUser(user.id)
+                                            .then(data => {
+                                                    if (data.resultCode === 0) {
+                                                        props.follow(user.id)
+                                                    }
+                                                props.followingInProgress(false, user.id);
+                                                }
+                                            )
+
                                     }}>Follow</button>}
                             </div>
                             <div className={style.infoBlock}>
