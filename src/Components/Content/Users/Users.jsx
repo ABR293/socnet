@@ -6,8 +6,6 @@ import {userAPI} from "../../../API/API";
 
 
 let Users = (props) => {
-    console.log(props);
-    console.log(props.followingInProgress);
 
     return (
         <div>
@@ -37,19 +35,21 @@ let Users = (props) => {
                                 </NavLink>
                                 {user.followed
                                     ? <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
-                                        props.followingInProgress(true, user.id);
+                                        props.unfollowUser(user.id);
+                                        /*props.followingInProgress(true, user.id);
                                         userAPI.unfollowUser(user.id)
                                             .then(data => {
                                                 if (data.resultCode === 0) {
                                                     props.unfollow(user.id)
                                                 }
                                                 props.followingInProgress(false, user.id);
-                                            });
+                                            });*/
 
                                     }}>UnFollow</button>
 
                                     : <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
-                                        props.followingInProgress(true, user.id);
+                                        props.followUser(user.id);
+                                        /*props.followingInProgress(true, user.id);
                                         userAPI.followUser(user.id)
                                             .then(data => {
                                                     if (data.resultCode === 0) {
@@ -58,7 +58,7 @@ let Users = (props) => {
                                                 props.followingInProgress(false, user.id);
                                                 }
                                             )
-
+*/
                                     }}>Follow</button>}
                             </div>
                             <div className={style.infoBlock}>

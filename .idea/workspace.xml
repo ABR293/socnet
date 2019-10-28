@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11df20e0-c853-41f2-9cb2-3ee695f59caa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/API/API.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/.sass-cache/f2333becb358e82f065e3e1e099f9cdef4206ab6/Header.module.sassc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/.sass-cache/f2333becb358e82f065e3e1e099f9cdef4206ab6/Header.module.sassc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.module.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/AuthReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/UsersReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,49 +21,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Header/Header.jsx">
+        <entry file="file://$PROJECT_DIR$/src/Redux/UsersReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Header/Header.module.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="233">
+              <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Redux/UsersReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-770">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="216">
+              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -81,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="41" column="59" lean-forward="true" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+            <state relative-caret-position="216">
+              <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -91,9 +54,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Redux/Store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/API/API.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="510">
               <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
             </state>
           </provider>
@@ -151,14 +126,14 @@
         <option value="$PROJECT_DIR$/src/Redux/ProfileReducer.js" />
         <option value="$PROJECT_DIR$/src/Components/Header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Header/Header.module.sass" />
-        <option value="$PROJECT_DIR$/src/Redux/Store.js" />
         <option value="$PROJECT_DIR$/src/Redux/AuthReducer.js" />
         <option value="$PROJECT_DIR$/src/API/API.js" />
         <option value="$PROJECT_DIR$/src/API/API.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Content/Users/Users.jsx" />
+        <option value="$PROJECT_DIR$/src/Redux/Store.js" />
         <option value="$PROJECT_DIR$/src/Redux/UsersReducer.js" />
+        <option value="$PROJECT_DIR$/src/Components/Content/Users/Users.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" />
       </list>
     </option>
   </component>
@@ -320,7 +295,7 @@
       <workItem from="1571997830981" duration="10575000" />
       <workItem from="1572016424432" duration="1199000" />
       <workItem from="1572120064044" duration="3685000" />
-      <workItem from="1572164413895" duration="6007000" />
+      <workItem from="1572164413895" duration="11493000" />
     </task>
     <task id="LOCAL-00001" summary="Test2(deleting small comment and commit with using webstorm).">
       <created>1569855983420</created>
@@ -504,11 +479,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571837680653</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Version 22.10.2019 13:19 - завершил 64 видео... сделал дезактивацию кнопок на время прохождения асинхронного запроса к серверу, а до этого вынес DataLogicLaer в отдельный файлик, правда запросы туда пока из UI)).">
+      <created>1572172366467</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1572172366467</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245875000" />
+    <option name="totallyTimeSpent" value="251361000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,7 +607,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 01.10.2019 15:01 - Добавлена работающая система добавления новых постов." />
     <MESSAGE value="Version 01.10.2019 19:24 - Реализован FLUX круговорот." />
     <MESSAGE value="Version 02.10.2019 13:18 - исключен файл Render.js  добавлен паттерн обсервер." />
     <MESSAGE value="Version 03.10.2019 12:13 - стабильная версия перед рефакторингом state / store." />
@@ -650,7 +631,8 @@
     <MESSAGE value="Version 22.10.2019 13:19 - в процесссе 59 видео.... что то сломал." />
     <MESSAGE value="Version 22.10.2019 13:19 - завершил 59 видео... подгружаю профиль с сервера))." />
     <MESSAGE value="Version 22.10.2019 13:19 - завершил 60 видео... освоил WithRoute, могу ходить по разным страничкам пользователей))." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 22.10.2019 13:19 - завершил 60 видео... освоил WithRoute, могу ходить по разным страничкам пользователей))." />
+    <MESSAGE value="Version 22.10.2019 13:19 - завершил 64 видео... сделал дезактивацию кнопок на время прохождения асинхронного запроса к серверу, а до этого вынес DataLogicLaer в отдельный файлик, правда запросы туда пока из UI))." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 22.10.2019 13:19 - завершил 64 видео... сделал дезактивацию кнопок на время прохождения асинхронного запроса к серверу, а до этого вынес DataLogicLaer в отдельный файлик, правда запросы туда пока из UI))." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Components/Content/Dialogs/Messedges/Messedges.jsx" />
@@ -931,34 +913,10 @@
         <state relative-caret-position="-867" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Redux/Store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Redux/ProfileReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/API/API.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -969,13 +927,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
+    <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-226">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -989,20 +944,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.jsx">
+    <entry file="file://$PROJECT_DIR$/src/API/API.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="41" column="59" lean-forward="true" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+        <state relative-caret-position="510">
+          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Redux/Store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Redux/UsersReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-770">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="233">
+          <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
