@@ -1,10 +1,9 @@
 import {connect} from 'react-redux';
 import {
     changePage,
-    followUser, followingInProgress, getUsers,
+    followUser, getUsers,
     setTotalUserCount,
     setUsers,
-    toggleFetching,
     unfollowUser
 } from '../../../Redux/UsersReducer';
 import React from 'react';
@@ -50,8 +49,6 @@ class UsersConteiner extends React.Component {
                         followUser={this.props.followUser}
                         unfollowUser={this.props.unfollowUser}
                         isFetching={this.props.isFetching}
-                        toggleFetching={this.props.toggleFetching}
-                        followingInProgress={this.props.followingInProgress}
                         isFollowing={this.props.isFollowing}
                     />}
             </>);
@@ -76,8 +73,6 @@ export default connect(mapStateToProps,
         setUsers,
         changePage,
         setTotalUserCount,
-        toggleFetching,
-        followingInProgress,
         getUsers: getUsers,
         unfollowUser
     }

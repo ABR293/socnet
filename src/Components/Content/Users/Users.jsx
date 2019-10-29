@@ -1,7 +1,6 @@
 import React from 'react';
 import style from "./Users.module.css";
 import {NavLink} from "react-router-dom";
-import {userAPI} from "../../../API/API";
 
 
 
@@ -36,30 +35,13 @@ let Users = (props) => {
                                 {user.followed
                                     ? <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
                                         props.unfollowUser(user.id);
-                                        /*props.followingInProgress(true, user.id);
-                                        userAPI.unfollowUser(user.id)
-                                            .then(data => {
-                                                if (data.resultCode === 0) {
-                                                    props.unfollow(user.id)
-                                                }
-                                                props.followingInProgress(false, user.id);
-                                            });*/
+
 
                                     }}>UnFollow</button>
 
                                     : <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
-                                        props.followUser(user.id);
-                                        /*props.followingInProgress(true, user.id);
-                                        userAPI.followUser(user.id)
-                                            .then(data => {
-                                                    if (data.resultCode === 0) {
-                                                        props.follow(user.id)
-                                                    }
-                                                props.followingInProgress(false, user.id);
-                                                }
-                                            )
-*/
-                                    }}>Follow</button>}
+                                        props.followUser(user.id)}}
+                                    >Follow</button>}
                             </div>
                             <div className={style.infoBlock}>
                                 <div className={style.name}>{user.name}</div>

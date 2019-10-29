@@ -46,3 +46,13 @@ export const authAPI = {
     }
 
 };
+
+export const ProfileAPI = {
+
+    setProfile(id) {
+        return(
+        instance.get(`profile/${id}`).then(response => {
+            return (response.data)
+        }))
+    }
+};
