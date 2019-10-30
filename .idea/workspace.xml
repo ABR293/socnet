@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11df20e0-c853-41f2-9cb2-3ee695f59caa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Content/Login/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Content/Login/Login.module.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Content/Login/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,62 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Redux/DialogReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/Login.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Content/Content.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/Login.module.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state relative-caret-position="1377">
+              <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -88,8 +33,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="102">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,22 +45,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Profile/ProfileConteiner.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="709">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="425">
+              <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -129,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/Contact/Contact.module.sass" />
         <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/Message/index.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/Messedges/index.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/Messedges/Messedges.jsx" />
@@ -172,14 +129,15 @@
         <option value="$PROJECT_DIR$/src/Redux/ProfileReducer.js" />
         <option value="$PROJECT_DIR$/src/Components/Header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/Redux/AuthReducer.js" />
-        <option value="$PROJECT_DIR$/src/Components/Content/Profile/ProfileConteiner.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx" />
-        <option value="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Content/Login/index.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Content/Login/Login.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Content/Content.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Content/Login/Login.module.sass" />
+        <option value="$PROJECT_DIR$/src/Components/Content/Profile/ProfileConteiner.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" />
+        <option value="$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx" />
+        <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx" />
       </list>
     </option>
   </component>
@@ -527,11 +485,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572428990664</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Version 30.10.2019 12.40 - видео 69. Осваиваем ХОКИ!!! (все остальное сделано!!)">
+      <created>1572430177592</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572430177592</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260684000" />
+    <option name="totallyTimeSpent" value="263699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,7 +511,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49620253" weight="0.20031796" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49620253" weight="0.22734499" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.22575517" />
       <window_info id="npm" order="2" sideWeight="0.5037975" side_tool="true" weight="0.08426073" />
       <window_info id="Favorites" order="3" sideWeight="0.5008881" side_tool="true" weight="0.22575517" />
@@ -648,7 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 03.10.2019 12:13 - стабильная версия перед рефакторингом state / store." />
     <MESSAGE value="Version 03.10.2019 12:13 - проведен рефакторинг state / store." />
     <MESSAGE value="Version 03.10.2019 12:13 - проведен рефакторинг dispatch." />
     <MESSAGE value="Version 10.10.2019 13:37 - Заново после глобальной поломки восстановлены экшены в диалогах , диспатчи, ну и вообще возможность писать что либо в диалоги, на очереди восстановление редьюсоров" />
@@ -673,7 +637,8 @@
     <MESSAGE value="Version 22.10.2019 13:19 - завершил 64 видео... сделал дезактивацию кнопок на время прохождения асинхронного запроса к серверу, а до этого вынес DataLogicLaer в отдельный файлик, правда запросы туда пока из UI))." />
     <MESSAGE value="Version 22.10.2019 13:19 - в процессе 66 видео САНКИ!!" />
     <MESSAGE value="Version 30.10.2019 12.40 - видео 69. Осваиваем ХОКИ!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 30.10.2019 12.40 - видео 69. Осваиваем ХОКИ!!!" />
+    <MESSAGE value="Version 30.10.2019 12.40 - видео 69. Осваиваем ХОКИ!!! (все остальное сделано!!)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 30.10.2019 12.40 - видео 69. Осваиваем ХОКИ!!! (все остальное сделано!!)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Components/Content/Profile/Post/index.jsx">
@@ -971,44 +936,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/Login.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Profile/ProfileConteiner.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Redux/DialogReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1022,30 +956,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/Login.jsx">
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/Login.module.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Redux/DialogReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Header/HeaderContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Content/Login/Login.module.sass">
+    <entry file="file://$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="425">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Profile/ProfileConteiner.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

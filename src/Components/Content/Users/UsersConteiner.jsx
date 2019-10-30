@@ -10,6 +10,7 @@ import React from 'react';
 import Users from './Users';
 import Preloader from "../../Common/Preloader";
 import {Redirect} from "react-router-dom/";
+import {WithAuthRedirect} from "../../../hoc/withAuthRedirect";
 
 class UsersConteiner extends React.Component {
 
@@ -70,6 +71,10 @@ let mapStateToProps = (state) => {
 
     }
 };
+
+let AuthredirectComponent = WithAuthRedirect(UsersConteiner);
+
+
 export default connect(mapStateToProps,
     {
         followUser,
@@ -77,8 +82,8 @@ export default connect(mapStateToProps,
         changePage,
         setTotalUserCount,
         getUsers: getUsers,
-        unfollowUser
+        unfollowUser,
     }
-)(UsersConteiner);
+)(AuthredirectComponent);
 
 
