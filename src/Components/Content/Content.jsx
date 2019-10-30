@@ -7,6 +7,7 @@ import Music from "./Music";
 import ProfileConteiner from "./Profile/ProfileConteiner";
 import DialogsConteiner from "./Dialogs/DialogsConteinet";
 import UsersConteiner from "./Users/UsersConteiner";
+import Login from "./Login";
 
 
 const Content = () => {
@@ -29,6 +30,9 @@ const Content = () => {
             />
             <Route path='/users'
                    render={() => <UsersConteiner/>}
+            />
+            <Route path='/login'
+                   render={() => <Login/>}
             />
         </div>
 
