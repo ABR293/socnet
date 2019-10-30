@@ -1,7 +1,22 @@
-//import React from 'react';
+import React from 'react';
 import Dialogs from "./Dialogs";
 import {changeMessageTextCreator, SendMessageCreator} from "../../../Redux/DialogReducer";
 import connect from "react-redux/es/connect/connect";
+
+ class DialogsConteiner extends React.Component{
+
+     componentDidMount() {
+         /*тут будут запрос за историей диалогов*/
+     }
+
+     render(){
+
+         return(
+             <Dialogs {...this.props}/>
+         )
+     }
+ }
+
 
 let mapStateToProps = (state) => {
     return {
@@ -22,7 +37,5 @@ let mapDispatchToProps = (dispatch) => {
 };
 
 
-const DialogsConteiner = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
-
-export default DialogsConteiner;
+export default connect(mapStateToProps, mapDispatchToProps)(DialogsConteiner);
 
