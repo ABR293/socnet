@@ -3,6 +3,28 @@ import style from './Dialogs.module.css';
 import Contact from "./Contact";
 import {Route} from 'react-router-dom';
 import Messages from "./Messages";
+import {Field, reduxForm} from "redux-form";
+
+const DialogForm = (props) => {
+    return(
+        <form onSubmit={props.handleSubmit} >
+            <Field
+                className={style.inputblock}
+                component='input'
+                name='newMessage'
+                placeholder='Write your message...'
+                type='text'
+            />
+            <button className={style.sendbtn}
+                    //onClick={() => {props.sendMessage(text)}}
+            >
+                Send message
+            </button>
+        </form>
+    )
+};
+
+let DialogReduxForm = reduxForm({form: 'newMessage'})(DialogForm);
 
 
 const Dialogs = (props) => {
@@ -22,7 +44,11 @@ const Dialogs = (props) => {
 
         let newMessageText = React.createRef();
 
-        let text = props.newMessageText;
+        //let text = props.newMessageText;
+
+        const sendMessage = (values) => {
+            props.sendMessage(values.newMessage)
+        };
 
         return (
             <div className={style.content}>
@@ -34,16 +60,12 @@ const Dialogs = (props) => {
                 <div className={style.dialog}>
                     {Messedges}
                     <div>
-                        <textarea className={style.inputblock}
-                                  ref={newMessageText}
-                                  onChange={() => {let text = newMessageText.current.value; props.messageTextChange(text);}}
-                                  value={props.newMessageText}/>
-
-                        <button className={style.sendbtn}
+                       <DialogReduxForm onSubmit={sendMessage}/>
+                       {/* <button className={style.sendbtn}
                                 onClick={() => {props.sendMessage(text)}}
                         >
                             Send message
-                        </button>
+                        </button>*/}
                     </div>
                 </div>
 

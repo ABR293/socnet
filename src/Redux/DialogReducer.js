@@ -8,7 +8,6 @@ export let SendMessageCreator = (message) => ({type: SEND_MESSAGE, message: mess
 
 
 let initialState = {
-    newMessageText: '',
     messageData:
         [
             {
@@ -59,12 +58,6 @@ export const dialogsReducer = (state = initialState, action) => {
         case SEND_MESSAGE: {
             console.log("You send:" + action.message);
             return state;
-        }
-        case CHANGE_MESSAGE_TEXT: {
-            return {
-                ...state,
-                newMessageText: action.text
-            };
         }
         default: {
             return state;

@@ -1,9 +1,9 @@
 import React from 'react';
 import Dialogs from "./Dialogs";
-import {changeMessageTextCreator, SendMessageCreator} from "../../../Redux/DialogReducer";
+import {SendMessageCreator} from "../../../Redux/DialogReducer";
 import connect from "react-redux/es/connect/connect";
-import {Redirect} from "react-router-dom/";
 import {WithAuthRedirect} from "../../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
  class DialogsConteiner extends React.Component{
 
@@ -29,15 +29,15 @@ let mapDispatchToProps = (dispatch) => {
     return {
         sendMessage: (text) => {
             dispatch(SendMessageCreator(text));
-            dispatch(changeMessageTextCreator(''));
         },
-        messageTextChange: (text) => {
-            dispatch(changeMessageTextCreator(text));
-        }
     };
 };
 
-let AuthredirectComponent = WithAuthRedirect(DialogsConteiner);
+/*let AuthredirectComponent = WithAuthRedirect(DialogsConteiner);
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthredirectComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthredirectComponent);*/
 
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    WithAuthRedirect,
+)(DialogsConteiner);

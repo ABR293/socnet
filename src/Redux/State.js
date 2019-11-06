@@ -112,7 +112,7 @@ let store = {
     }
 };
 store.subscribe(rerenderEntireTree);
-window.store = store;
+//
 
 export default store;
 
