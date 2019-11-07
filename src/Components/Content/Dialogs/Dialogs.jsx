@@ -4,19 +4,23 @@ import Contact from "./Contact";
 import {Route} from 'react-router-dom';
 import Messages from "./Messages";
 import {Field, reduxForm} from "redux-form";
+import {Input} from "../../Common/FormControls/FormControls";
+import {maxlengthCreator} from "../../../Utils/Validators/Validators";
+
+const maxlength30 = maxlengthCreator(30);
 
 const DialogForm = (props) => {
     return(
         <form onSubmit={props.handleSubmit} >
             <Field
                 className={style.inputblock}
-                component='input'
+                component={Input}
+                validate={[maxlength30]}
                 name='newMessage'
                 placeholder='Write your message...'
                 type='text'
             />
             <button className={style.sendbtn}
-                    //onClick={() => {props.sendMessage(text)}}
             >
                 Send message
             </button>
@@ -42,9 +46,6 @@ const Dialogs = (props) => {
             }
         );
 
-        let newMessageText = React.createRef();
-
-        //let text = props.newMessageText;
 
         const sendMessage = (values) => {
             props.sendMessage(values.newMessage)
@@ -61,11 +62,6 @@ const Dialogs = (props) => {
                     {Messedges}
                     <div>
                        <DialogReduxForm onSubmit={sendMessage}/>
-                       {/* <button className={style.sendbtn}
-                                onClick={() => {props.sendMessage(text)}}
-                        >
-                            Send message
-                        </button>*/}
                     </div>
                 </div>
 

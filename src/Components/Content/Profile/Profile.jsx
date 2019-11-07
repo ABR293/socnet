@@ -4,15 +4,19 @@ import Post from './Post';
 import noAvatar from '../../../img/Av2.jpg'
 import ProfileStatus from "./ProfileStatus";
 import {Field, reduxForm} from "redux-form";
+import {maxlengthCreator} from '../../../Utils/Validators/Validators'
+import {Textarea} from "../../Common/FormControls/FormControls";
 
+const maxlength50 = maxlengthCreator(50);
 
 const PostForm = (props) => {
     return(
         <form onSubmit={props.handleSubmit}>
             <Field
-                component='textarea'
+                component={Textarea}
                 name='postText'
                 placeholder= 'Add new post...'
+                validate={[maxlength50]}
                 className={style.newPost__inputblock}/>
 
             <button
@@ -34,9 +38,6 @@ const Profile = (props) => {
             );
         });
 
-        //let newPostText = React.createRef();
-        //let text = props.PostText;
-
         const onSubmit = (values) => {props.addNewPost(values.postText)};
         return (
 
@@ -53,18 +54,8 @@ const Profile = (props) => {
                     />
                 </div>
                 <div className={style.newPost}>
-                    <PostReduxForm  onSubmit = {onSubmit}/>
-                    {/*<textarea
-                        ref={newPostText}
-                        onChange={() => {let text = newPostText.current.value; props.changePostText(text);}}
-                        className={style.newPost__inputblock}
-                        value={props.PostText}/>
+                    <PostReduxForm  onSubmit = {onSubmit} />
 
-                    <button
-                        onClick={() => {props.addNewPost(text)}}
-                        className={style.newPost__add}>
-                        Add Post
-                    </button>*/}
                 </div>
                 <div className='3'>
                     {Posts}
