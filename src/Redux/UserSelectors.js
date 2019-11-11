@@ -1,6 +1,23 @@
-export const getUsersList = (state) => {
+import {createSelector} from "reselect";
+
+const getUsers = (state) => {
     return state.usersPage.users;
 };
+export const getUsersList = (state) => {
+    console.log('getUsers active');
+    return getUsers(state).filter( users => true);
+};
+export const getUsersListSuper = createSelector(getUsers,
+    (users) => {
+        console.log('getUsersSuper active');
+        return users.filter(u => true);
+    })
+/*export const getUsersListSuper = createSelector(getUsers,
+    (users) => {
+    console.log('getUsersSuper active');
+    users.filter( u => true);
+});*/
+
 export const getPageSize = (state) => {
     return state.usersPage.pageSize;
 };

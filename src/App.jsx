@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Content from './Components/Content';
 import HeaderContainer from "./Components/Header/HeaderContainer";
-import {authentication, logout} from "./Redux/AuthReducer";
+import {authentication} from "./Redux/AuthReducer";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
