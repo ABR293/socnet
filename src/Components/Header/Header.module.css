@@ -43,13 +43,19 @@
 .userBlock {
   background-color: #223b6d;
   color: #ff572b;
-  width: 70px;
+  width: 160px;
   height: 30px;
   font-size: 20px;
   margin: 7px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-radius: 5px; }
+
+.logout {
+  background-color: #3995ff;
+  color: #000b44;
+  font-weight: bold;
+  margin: 5px; }
 
 /*# sourceMappingURL=Header.module.css.map */

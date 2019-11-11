@@ -12,6 +12,14 @@ import Preloader from "../../Common/Preloader";
 import {Redirect} from "react-router-dom/";
 import {WithAuthRedirect} from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getCurentPage,
+    getIsFetching,
+    getIsFollowing,
+    getPageSize,
+    getTotalUserCount,
+    getUsersList
+} from "../../../Redux/UserSelectors";
 
 class UsersConteiner extends React.Component {
 
@@ -62,31 +70,16 @@ class UsersConteiner extends React.Component {
 let mapStateToProps = (state) => {
 
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUserCount: state.usersPage.totalUserCount,
-        curentPage: state.usersPage.curentPage,
-        isFetching: state.usersPage.isFetching,
-        isFollowing: state.usersPage.isFollowing,
+        users: getUsersList(state),
+        pageSize: getPageSize(state),
+        totalUserCount: getTotalUserCount(state),
+        curentPage: getCurentPage(state),
+        isFetching: getIsFetching(state),
+        isFollowing: getIsFollowing(state),
         isAuth: state.auth.isAuth
 
     }
 };
-
-/*let AuthredirectComponent = WithAuthRedirect(UsersConteiner);
-
-
-export default connect(mapStateToProps,
-    {
-        followUser,
-        setUsers,
-        changePage,
-        setTotalUserCount,
-        getUsers: getUsers,
-        unfollowUser,
-    }
-)(AuthredirectComponent);*/
-
 
 export default compose(
     connect(mapStateToProps, {
