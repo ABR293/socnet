@@ -2,10 +2,11 @@ import React from 'react';
 import style from './Profile.module.css';
 import Post from './Post';
 import noAvatar from '../../../img/Av2.jpg'
-import ProfileStatus from "./ProfileStatus";
+//import ProfileStatus from "./ProfileStatus";
 import {Field, reduxForm} from "redux-form";
 import {maxlengthCreator} from '../../../Utils/Validators/Validators'
 import {Textarea} from "../../Common/FormControls/FormControls";
+import ProfileStatusWithHooks from "./ProfileStatusHOOK";
 
 const maxlength50 = maxlengthCreator(50);
 
@@ -48,7 +49,7 @@ const Profile = (props) => {
                     <h1 className={style.name}>{props.name}</h1>
                 </div>
                 <div>
-                    <ProfileStatus
+                    <ProfileStatusWithHooks
                         status={props.status}
                         updateUserStatus={props.updateUserStatus}
                     />

@@ -18,7 +18,8 @@ import {
     getIsFollowing,
     getPageSize,
     getTotalUserCount,
-    getUsersList, getUsersListSuper
+    //getUsersList,
+    getUsersListSuper
 } from "../../../Redux/UserSelectors";
 
 class UsersConteiner extends React.Component {
