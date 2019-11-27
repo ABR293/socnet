@@ -1,7 +1,7 @@
 import {authentication} from "./AuthReducer";
 
 
-const SET_INITIALIZE = 'SET-INITIALIZE';
+const SET_INITIALIZE = 'socNet/app/SET-INITIALIZE';
 
 
 let initialState = {

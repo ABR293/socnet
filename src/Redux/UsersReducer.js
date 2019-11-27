@@ -1,12 +1,12 @@
 import {userAPI} from "../API/API";
 
-const FOLLOW = "FOLLOW";
-const UNFOLLOW = "UNFOLLOW";
-const SET_USERS = "SET-USERS";
-const CHANGE_PAGE = "CHANGE-PAGE";
-const SET_TOTAL_USERS_COUNT = "SET-TOTAL-USER-COUNT";
-const TOGGLE_IS_FETCHING = "TOGGLE-IS-FETCHING";
-const FOLLOWING_IN_PROGRESS = "FOLLOWING-IN-PROGRESS";
+const FOLLOW = "socNet/userPage/FOLLOW";
+const UNFOLLOW = "socNet/userPage/UNFOLLOW";
+const SET_USERS = "socNet/userPage/SET-USERS";
+const CHANGE_PAGE = "socNet/userPage/CHANGE-PAGE";
+const SET_TOTAL_USERS_COUNT = "socNet/userPage/SET-TOTAL-USER-COUNT";
+const TOGGLE_IS_FETCHING = "socNet/userPage/TOGGLE-IS-FETCHING";
+const FOLLOWING_IN_PROGRESS = "socNet/userPage/FOLLOWING-IN-PROGRESS";
 
 let initialState = {
     users:[ ],

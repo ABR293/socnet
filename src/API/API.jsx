@@ -81,5 +81,12 @@ export const authAPI = {
 
 };
 
+export const testAPI = {
+    getMusicList(){
+        return(
+            axios.get('http://localhost:4000/')
 
+        )
+    }
+};
 

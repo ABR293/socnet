@@ -1,6 +1,6 @@
 import {authAPI} from "../API/API";
 import {stopSubmit} from "redux-form";
-const SET_USER_DATA = 'SET-USER-DATA';
+const SET_USER_DATA = 'socNet/Auth/SET-USER-DATA';
 
 
 let initialState = {
