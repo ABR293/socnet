@@ -32,7 +32,7 @@ let DialogReduxForm = reduxForm({form: 'newMessage'})(DialogForm);
 
 
 const Dialogs = (props) => {
-        let Adress = props.messageData.map( (el)=>{
+        let Dialogs = props.messageData.map( (el)=>{
             return(
                 <Contact name={el.name}  id={el.id} key={el.id}/>
                 )
@@ -53,11 +53,10 @@ const Dialogs = (props) => {
 
         return (
             <div className={style.content}>
-                <div className={style.header}>Dialogs</div>
+                <div className={style.header}><h5>Dialogs</h5></div>
                 <div className={style.dialogs}>
-                    {Adress}
+                    {Dialogs}
                 </div>
-                <div className={style.separator}> </div>
                 <div className={style.dialog}>
                     {Messedges}
                     <div>

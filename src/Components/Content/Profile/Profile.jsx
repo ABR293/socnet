@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Profile.module.css';
 import Post from './Post';
-import noAvatar from '../../../img/Av2.jpg'
+import noAvatar from '../../../img/NA2.gif'
 //import ProfileStatus from "./ProfileStatus";
 import {Field, reduxForm} from "redux-form";
 import {maxlengthCreator} from '../../../Utils/Validators/Validators'
@@ -40,23 +40,43 @@ const Profile = (props) => {
         });
 
         const onSubmit = (values) => {props.addNewPost(values.postText)};
+        console.log(props.contacts);
         return (
 
-            <div>
+            <div className={style.profileBlock}>
                 <div className={style.info}>
-                    <img className={style.avatar}
-                         src={props.avatar === null ? noAvatar : props.avatar} alt="NICHT AVATAREN!!!"/>
-                    <h1 className={style.name}>{props.name}</h1>
-                </div>
-                <div>
-                    <ProfileStatusWithHooks
-                        status={props.status}
-                        updateUserStatus={props.updateUserStatus}
+                    <img
+                        className={style.avatar}
+                        src={props.avatar === null ? noAvatar : props.avatar} alt="NICHT AVATAREN!!!"
                     />
-                </div>
-                <div className={style.newPost}>
-                    <PostReduxForm  onSubmit = {onSubmit} />
+                    <div className={style.name}>
+                        <h3>{props.name}</h3>
+                    </div>
+                    <div className={style.status}>
+                        <ProfileStatusWithHooks
+                            status={props.status}
+                            updateUserStatus={props.updateUserStatus}
+                        />
+                    </div>
+                    <div className={style.contactsBlock}>
 
+                        {!props.contacts ? null :
+                            <div className={style.contactsList}>
+                                {props.contacts.website = null ? <a href={props.contacts.website}> </a> : null}
+                                {props.contacts.vk = null ? <a href={props.contacts.vk}> </a> : null}
+                                {props.contacts.facebook = null ? <a href={props.contacts.facebook}> </a> : null}
+                                {props.contacts.instagram = null ? <a href={props.contacts.instagram}> </a> :
+                                    null}
+                                {props.contacts.twitter = null ? <a href={props.contacts.twitter}> </a> : null}
+                                {props.contacts.website = null ? <a href={props.contacts.website}> </a> : null}
+                                {props.contacts.youtube = null ? <a href={props.contacts.youtube}> </a> : null}
+                                {props.contacts.mainLink = null ? <a href={props.contacts.mainLink}> </a> : null}
+                            </div>}
+                    </div>
+                </div>
+
+                <div className={style.newPost}>
+                    <PostReduxForm onSubmit={onSubmit}/>
                 </div>
                 <div className='3'>
                     {Posts}

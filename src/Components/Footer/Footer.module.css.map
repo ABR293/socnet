@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,OAAO;EACL,SAAS,EAAE,MAAM;EACjB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,KAAK;EACpB,gBAAgB,EAAE,OAAO",
-"sources": ["Footer.module.sass"],
+"mappings": "AAEA,OAAO;EACL,SAAS,EAAE,MAAM;EACjB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,KAAK;EACpB,gBAAgB,ECPT,OAAO",
+"sources": ["Footer.module.sass","../Common/_vars.sass"],
 "names": [],
 "file": "Footer.module.css"
 }

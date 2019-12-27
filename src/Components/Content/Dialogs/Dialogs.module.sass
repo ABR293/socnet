@@ -1,31 +1,33 @@
+@import './../../Common/vars'
+
 .content
   grid-area: content
-  border-radius: 1vmax
-  background-color: aqua
+  background-color: $color1
   width: 100%
   height: auto
   display: grid
-  grid-template-columns: 3fr 5px 6.9fr
-  grid-template-rows: 30px auto
-  grid-template-areas: 'header header header' 'dialogs separator dialog'
+  grid-template-columns: 150px  auto
+  grid-template-rows: 35px auto
+  grid-template-areas: 'header header' 'dialogs dialog'
+  border-radius: 8px
 .header
   grid-area: header
-  color: blue
-  background-color: pink
-  font-size: 25px
-  font-family: "Times New Roman"
-.separator
-  background-color: blue
-  border-radius: 2px
+  font-size: 30px
+  font-weight: bold
+  h5
+    color: white
+    background-color: $color1
+    margin: 3px auto 3px 20px
 .dialogs
   grid-area: dialogs
-  height: 300px
-  background-color: blanchedalmond
+  min-height: 150px
+  background-color: $color1
 .dialog
   grid-area: dialog
   height: 300px
-  background-color: #00b800
+  background-color: $color1
   width: 100%
+  border-left: solid 2px white
 .inputblock
     width: 90%
     margin: 5px 5% 5px 3%

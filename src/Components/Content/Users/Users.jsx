@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "./Users.module.css";
 import {NavLink} from "react-router-dom";
+import noAvatar from "../../../img/NA5.jpg";
 
 
 
@@ -29,25 +30,31 @@ let Users = (props) => {
                                 <NavLink to={'/profile/' + user.id}>
                                     <img className={style.avatar}
                                          src={user.photos.small != null ?
-                                             user.photos.small : props.fixSrc}
+                                             user.photos.small : noAvatar}
                                          alt=""/>
                                 </NavLink>
-                                {user.followed
-                                    ? <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
+
+                            </div>
+                            {user.followed
+                                ? <button
+                                    className={style.followBtn}
+                                    disabled={props.isFollowing.some(id => id === user.id)}
+                                    onClick={() => {
                                         props.unfollowUser(user.id);
 
 
                                     }}>UnFollow</button>
 
-                                    : <button disabled={props.isFollowing.some(id => id === user.id)} onClick={() => {
-                                        props.followUser(user.id)}}
-                                    >Follow</button>}
-                            </div>
-                            <div className={style.infoBlock}>
-                                <div className={style.name}>{user.name}</div>
-                                <div className={style.status}>{user.status}</div>
-                                {/*<div className={style.location}></div>*/}
-                            </div>
+                                : <button
+                                    className={style.followBtn}
+                                    disabled={props.isFollowing.some(id => id === user.id)}
+                                    onClick={() => {
+                                        props.followUser(user.id)
+                                    }}
+                                >Follow</button>}
+                            <div className={style.name}>{user.name}</div>
+                            <div className={style.status}>{user.status}</div>
+                            {/*<div className={style.location}></div>*/}
                         </div>)
                 }
                 <button

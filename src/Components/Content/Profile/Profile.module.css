@@ -1,29 +1,53 @@
-.info {
-  display: flex;
+.profileBlock {
   width: 100%;
-  height: 150px; }
+  height: 100%; }
+
+.info {
+  min-height: 180px;
+  margin: 5px;
+  width: 90%;
+  display: grid;
+  grid-template-rows: 50px 20px auto;
+  grid-template-columns: 155px auto;
+  grid-gap: 5px;
+  grid-template-areas: "avatar name" "avatar status" "avatar contacts"; }
 
 .avatar {
+  grid-area: avatar;
   width: 140px;
-  height: 140px;
-  background-color: darkred;
-  margin: 5px 20px 5px 10px; }
+  height: 170px;
+  background-color: #f8f0ff;
+  margin: 5px 20px 5px 10px;
+  border-radius: 5px; }
 
 .name {
-  margin: 5px 30% 5px 30%;
-  font-size: 20px;
-  color: darkslateblue; }
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  color: #fafaff;
+  font-weight: bold;
+  font-size: 28px;
+  border-bottom: solid 0.5px #f8f0ff; }
 
-.newPost {
-  width: 100%; }
-  .newPost__inputblock {
-    width: 90%;
-    margin: 5px 5% 5px 3%; }
-  .newPost__add {
-    margin: 0 5% 5px 80%;
-    width: 80px;
-    background-color: #004291;
-    color: white; }
+.status {
+  grid-area: status; }
+
+.contactsBlock {
+  grid-area: contacts; }
+
+.contactsList {
+  display: flex;
+  flex-flow: column;
+    flex-flow-margin: 2px; }
+
+.newPost__inputblock {
+  width: 90%;
+  margin: 5px 5% 5px 3%; }
+.newPost__add {
+  margin: 0 5% 5px 80%;
+  width: 80px;
+  background-color: #004291;
+  color: white; }
 
 .post {
   color: #090909; }

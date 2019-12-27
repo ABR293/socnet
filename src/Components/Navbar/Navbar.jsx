@@ -6,8 +6,8 @@ import {NavLink} from "react-router-dom";
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className={style.navbarblock}>
-                <ul className={style.navmenu}>
+            <nav className={style.navBlock}>
+                <ul className={style.navMenu}>
                     <li><NavLink to="/profile" activeClassName={style.activeLink}>Profile</NavLink></li>
                     <li><NavLink to="/dialogs" activeClassName={style.activeLink}>Dialogs</NavLink></li>
                     <li><NavLink to="/news" activeClassName={style.activeLink}>News</NavLink></li>
