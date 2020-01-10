@@ -13,7 +13,7 @@ import {Redirect} from "react-router-dom/";
 import {WithAuthRedirect} from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
 import {
-    getCurentPage,
+    getCurrentPage,
     getIsFetching,
     getIsFollowing,
     getPageSize,
@@ -26,7 +26,7 @@ class UsersConteiner extends React.Component {
 
     componentDidMount() {this.props.getUsers(this.props.curentPage, this.props.pageSize);}
 
-    onPageChange = (page) => {
+    onPageChanged = (page) => {
         this.props.getUsers(page, this.props.pageSize);
         this.props.changePage(page);
     };
@@ -39,7 +39,7 @@ class UsersConteiner extends React.Component {
 
         let pages = [];
 
-        let maxPage = 17;
+        let maxPage = 1000;
         if (pagesCount < maxPage) {
             maxPage = pagesCount
         }
@@ -48,6 +48,9 @@ class UsersConteiner extends React.Component {
             pages.push(n);
         }
         if(!this.props.isAuth) return <Redirect to={'/login'}/> ;
+
+        console.log(this.props.pageSize);
+
         return (
             <>
                 {this.props.isFetching ? <Preloader/> :
@@ -55,10 +58,10 @@ class UsersConteiner extends React.Component {
                         totalUserCount={this.props.totalUserCount}
                         fixSrc={fixSrc}
                         pages={pages}
-                        PageSize={this.props.pageSize}
-                        onPageChange={this.onPageChange}
+                        pageSize={this.props.pageSize}
+                        onPageChanged={this.onPageChanged}
                         users={this.props.users}
-                        curentPage={this.props.curentPage}
+                        currentPage={this.props.currentPage}
                         followUser={this.props.followUser}
                         unfollowUser={this.props.unfollowUser}
                         isFetching={this.props.isFetching}
@@ -75,7 +78,7 @@ let mapStateToProps = (state) => {
         users: getUsersListSuper(state),
         pageSize: getPageSize(state),
         totalUserCount: getTotalUserCount(state),
-        curentPage: getCurentPage(state),
+        currentPage: getCurrentPage(state),
         isFetching: getIsFetching(state),
         isFollowing: getIsFollowing(state),
         isAuth: state.auth.isAuth

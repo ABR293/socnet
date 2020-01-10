@@ -2,29 +2,22 @@ import React from 'react';
 import style from "./Users.module.css";
 import {NavLink} from "react-router-dom";
 import noAvatar from "../../../img/NA5.jpg";
+import Paginator from "../../Common/Paginator/Paginator";
 
 
 
-let Users = (props) => {
-
+let Users = ({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
+              currentPage, followUser, unfollowUser, isFetching, isFollowing}) => {
+        console.log({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
+            currentPage, followUser, unfollowUser, isFetching, isFollowing});
     return (
         <div>
             <div className={style.pageblock}>
-                {props.pages.map((page) => {
-                    return (<button
-                        onClick={() => {
-                            props.onPageChange(page)
-                        }}
-                        className={props.curentPage === page ?
-                            style.pageIndex__selected :
-                            style.pageIndex}
-                        key={page}
-                    >{page}</button>)
-                })}
+                <Paginator currentPage={currentPage} onPageChanged={onPageChanged}
+                           totalItemsCount={totalUserCount} pageSize={pageSize}/>
             </div>
             <div>
-                {
-                    props.users.map((user) =>
+                {(users.map((user) =>
                         <div key={user.id} className={style.userBlock}>
                             <div className={style.avatarBlock}>
                                 <NavLink to={'/profile/' + user.id}>
@@ -38,27 +31,27 @@ let Users = (props) => {
                             {user.followed
                                 ? <button
                                     className={style.followBtn}
-                                    disabled={props.isFollowing.some(id => id === user.id)}
+                                    disabled={isFollowing.some(id => id === user.id)}
                                     onClick={() => {
-                                        props.unfollowUser(user.id);
+                                        unfollowUser(user.id);
 
 
                                     }}>UnFollow</button>
 
                                 : <button
                                     className={style.followBtn}
-                                    disabled={props.isFollowing.some(id => id === user.id)}
+                                    disabled={isFollowing.some(id => id === user.id)}
                                     onClick={() => {
-                                        props.followUser(user.id)
+                                       followUser(user.id)
                                     }}
                                 >Follow</button>}
                             <div className={style.name}>{user.name}</div>
                             <div className={style.status}>{user.status}</div>
                             {/*<div className={style.location}></div>*/}
-                        </div>)
+                        </div>))
                 }
                 <button
-                    //onClick={props.setUsers([1,2,3,4,5,])}
+                    //onClick=(setUsers([1,2,3,4,5,])}
                 >
                     Show more
                 </button>

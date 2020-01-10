@@ -10,9 +10,9 @@ const FOLLOWING_IN_PROGRESS = "socNet/userPage/FOLLOWING-IN-PROGRESS";
 
 let initialState = {
     users:[ ],
-    pageSize: 5,
+    pageSize: 8,
     totalUserCount: 0,
-    curentPage: 1,
+    currentPage: 1,
     isFetching: true,
     status: '',
     isFollowing: [],
@@ -53,7 +53,7 @@ export const userReducer = (state = initialState, action) => {
         case CHANGE_PAGE:{
             return{
                 ...state,
-                curentPage: action.number,
+                currentPage: action.number,
             }
         }
         case SET_TOTAL_USERS_COUNT:{
