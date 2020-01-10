@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11df20e0-c853-41f2-9cb2-3ee695f59caa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Common/Paginator/Paginator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Common/Paginator/Paginator.test.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/UserSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/UserSelectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/UsersReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-311">
-              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -45,14 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Content.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+            <state relative-caret-position="850">
+              <caret line="50" selection-start-line="49" selection-end-line="50" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -61,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="16" column="81" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="16" selection-end-column="81" />
+              <caret line="16" column="81" selection-start-line="15" selection-start-column="15" selection-end-line="16" selection-end-column="81" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -73,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.module.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="714">
-              <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+              <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -82,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/Components/Common/Paginator/Paginator.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="233">
-              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -108,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Redux/State.js" />
         <option value="$PROJECT_DIR$/src/Components/Content/Dialogs/DialogsConteinet.jsx" />
         <option value="$PROJECT_DIR$/src/Utils/Validators/Validators.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Common/FormControls/FormControls.jsx" />
@@ -159,6 +160,7 @@
         <option value="$PROJECT_DIR$/src/Components/Common/Paginator/Paginator.jsx" />
         <option value="$PROJECT_DIR$/src/Components/Common/Paginator/Paginator.module.sass" />
         <option value="$PROJECT_DIR$/src/Components/Content/Content.jsx" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -179,59 +181,6 @@
             <path>
               <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
               <item name="socnet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-              <item name="FormControls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-              <item name="Paginator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socnet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socnet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,8 +257,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="Jest.length of posts should be incremented" />
         <item itemvalue="Jest.renders without crashing" />
       </list>
@@ -389,7 +349,7 @@
       <workItem from="1577351597124" duration="7414000" />
       <workItem from="1577433310425" duration="28000" />
       <workItem from="1577437297705" duration="4934000" />
-      <workItem from="1578643280492" duration="7479000" />
+      <workItem from="1578643280492" duration="11072000" />
     </task>
     <task id="LOCAL-00001" summary="Test2(deleting small comment and commit with using webstorm).">
       <created>1569855983420</created>
@@ -664,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574868933301</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="видео 94">
+      <created>1578661313222</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1578661313223</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -688,7 +655,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="449536000" />
+    <option name="totallyTimeSpent" value="453129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -701,11 +668,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.36960602" visible="true" weight="0.24244833" />
-      <window_info id="Structure" order="1" sideWeight="0.630394" side_tool="true" weight="0.31399047" />
-      <window_info id="npm" order="2" sideWeight="0.5037975" side_tool="true" weight="0.08426073" />
+      <window_info id="Repositories" weight="0.3298887" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64727956" visible="true" weight="0.24244833" />
+      <window_info id="Structure" order="1" sideWeight="0.19344263" side_tool="true" weight="0.24244833" />
+      <window_info id="npm" order="2" sideWeight="0.35272044" side_tool="true" visible="true" weight="0.24244833" />
       <window_info id="Favorites" order="3" sideWeight="0.5008881" side_tool="true" weight="0.22575517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
@@ -715,7 +682,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49920508" weight="0.24333926" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49920508" visible="true" weight="0.053285968" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.074600354" />
@@ -752,6 +719,12 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
+              <option name="COLUMN_WIDTH">
+                <map>
+                  <entry key="2" value="60" />
+                  <entry key="3" value="100" />
+                </map>
+              </option>
               <option name="COLUMN_ORDER">
                 <list>
                   <option value="0" />
@@ -781,7 +754,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version 16.10.2019 12:09 - еперь state не изменяется &quot;на прямую&quot;, происходит копирование объекта (глубокое с раскукоживанием и перезаписью в новый объект) и уже возвращение этой копии, ижет просмотр видео 48." />
     <MESSAGE value="Version 16.10.2019 15:11 - отрефакторил редьюсоры, теперь копирование происходит боолее изящно, и не создается отдельная переменная под копию стейта, на очереди видео 49 - начало работы с аякс запросами." />
     <MESSAGE value="Version 16.10.2019 18:34 - создается страничка Users, до конца 49 видео осталось 15 минут." />
     <MESSAGE value="Version 16.10.2019 13:31 - Завершил видео 49 Доделал страничку Поользователей" />
@@ -806,19 +778,10 @@
     <MESSAGE value="немного переделал стилизацию приложения, завтра займусь видео" />
     <MESSAGE value="доделывал стилизацию" />
     <MESSAGE value="делал видео 93 пагинатор, нужно еще доделать" />
-    <option name="LAST_COMMIT_MESSAGE" value="делал видео 93 пагинатор, нужно еще доделать" />
+    <MESSAGE value="видео 94" />
+    <option name="LAST_COMMIT_MESSAGE" value="видео 94" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hoc/withAuthRedirect.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1155,14 +1118,14 @@
     <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/Users.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="16" column="81" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="16" selection-end-column="81" />
+          <caret line="16" column="81" selection-start-line="15" selection-start-column="15" selection-end-line="16" selection-end-column="81" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1172,7 +1135,7 @@
     <entry file="file://$PROJECT_DIR$/src/Components/Common/Paginator/Paginator.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -1189,7 +1152,7 @@
     <entry file="file://$PROJECT_DIR$/src/Components/Content/Users/UsersConteiner.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-311">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1205,11 +1168,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Content/Content.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="850">
+          <caret line="50" selection-start-line="49" selection-end-line="50" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
         </state>
       </provider>
     </entry>
