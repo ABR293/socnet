@@ -5,14 +5,14 @@ import Preloader from "../Common/Preloader";
 // import Settings from "./Settings";
 // import News from "./News";
 // import Music from "./Music";
-// import ProfileConteiner from "./Profile/ProfileConteiner";
-// import DialogsConteiner from "./Dialogs/DialogsConteinet";
-// import UsersConteiner from "./Users/UsersConteiner";
+// import ProfileContainer from "./Profile/ProfileContainer";
+// import DialogsContainer from "./Dialogs/DialogsContainer";
+// import UsersContainer from "./Users/UsersContainer";
 // import Login from "./Login";
 
-const ProfileConteiner = React.lazy(() => import("./Profile/ProfileConteiner"));
-const DialogsConteiner = React.lazy(() => import("./Dialogs/DialogsConteinet"));
-const UsersConteiner = React.lazy(() => import("./Users/UsersConteiner"));
+const ProfileContainer = React.lazy(() => import("./Profile/ProfileContainer"));
+const DialogsContainer = React.lazy(() => import("./Dialogs/DialogsContainer"));
+const UsersContainer = React.lazy(() => import("./Users/UsersContainer"));
 const Login = React.lazy(() => import("./Login"));
 const Music = React.lazy(() => import("./Music"));
 const News = React.lazy(() => import("./News"));
@@ -22,10 +22,10 @@ const Content = () => {
     return (
         <div className={style.content}>
             <Route path='/dialogs'
-                   render={() => <Suspense fallback={<div><Preloader/></div>}><DialogsConteiner/></Suspense>}
+                   render={() => <Suspense fallback={<div><Preloader/></div>}><DialogsContainer/></Suspense>}
             />
             <Route path='/profile/:userId?'
-                   render={() => <Suspense fallback={<Preloader/>}><ProfileConteiner/></Suspense>}
+                   render={() => <Suspense fallback={<Preloader/>}><ProfileContainer/></Suspense>}
             />
             <Route path='/news'
                    render={() => <Suspense fallback={<Preloader/>}><News/></Suspense>}
@@ -37,7 +37,7 @@ const Content = () => {
                    render={() => <Suspense fallback={<Preloader/>}><Settings/></Suspense>}
             />
             <Route path='/users'
-                   render={() => <Suspense fallback={<Preloader/>}><UsersConteiner/></Suspense>}
+                   render={() => <Suspense fallback={<Preloader/>}><UsersContainer/></Suspense>}
             />
             <Route path='/login'
                    render={() =>  <Suspense fallback={<Preloader/>}><Login/></Suspense>}

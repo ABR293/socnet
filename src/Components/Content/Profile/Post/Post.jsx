@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import style from './Post.module.css';
 import noAvatar from '../../../../img/NA5.jpg'
 
