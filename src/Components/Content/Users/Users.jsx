@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from "./Users.module.css";
 import {NavLink} from "react-router-dom";
 import noAvatar from "../../../img/NA5.jpg";
@@ -10,6 +10,11 @@ let Users = ({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
               currentPage, followUser, unfollowUser, isFetching, isFollowing}) => {
         console.log({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
             currentPage, followUser, unfollowUser, isFetching, isFollowing});
+
+    useEffect(() => {
+        document.title = `Users`;
+    });
+
     return (
         <div>
             <div className={style.pageblock}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './Login.module.css';
 import {reduxForm, Field} from "redux-form/";
 import {Input} from "../../Common/FormControls/FormControls";
@@ -11,6 +11,10 @@ const maxlength20 = maxlengthCreator(20);
 const minlength5 = minlengthCreator(5);
 
 const LoginForm = (props) => {
+
+    useEffect(() => {
+        document.title = `Login`;
+    });
 
     return(
         <form onSubmit={props.handleSubmit}>

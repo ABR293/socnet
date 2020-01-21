@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './Dialogs.module.css';
 import Contact from "./Contact";
 import {Route} from 'react-router-dom';
@@ -10,6 +10,11 @@ import {maxlengthCreator} from "../../../Utils/Validators/Validators";
 const maxlength30 = maxlengthCreator(30);
 
 const DialogForm = (props) => {
+
+    useEffect(() => {
+        document.title = `Dialogs`;
+    });
+
     return(
         <form onSubmit={props.handleSubmit} >
             <Field
