@@ -63,7 +63,7 @@ export const ProfileAPI = {
         })
     },
     saveProfile(profile) {
-        console.log(profile);
+
         return instance.put(`profile`, profile );
     }
 };
@@ -94,12 +94,9 @@ export const authAPI = {
 
 };
 
-export const testAPI = {
-    getMusicList(){
-        return(
-            axios.get('http://localhost:4000/')
-
-        )
+export const securityAPI = {
+    getCaptchaURL(){
+        return instance.get('security/get-captcha-url/');
     }
 };
 
