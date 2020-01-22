@@ -1,0 +1,54 @@
+.block
+  position: relative
+  width: 100%
+  height: 100%
+  background-color: #090909
+  &:hover img
+    opacity: 50%
+  &:hover .block__btn
+    height: 30px
+    button
+      display: block
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  &__btn
+    position: absolute
+    bottom: 0
+    height: 0
+    width: 100%
+    button
+      width: 100%
+      height: 100%
+      display: none
+.menu
+  position: absolute
+  background-color: #004291
+  padding: 3px
+  bottom: -35px
+  height: 35px
+  width: 100%
+  display: grid
+  grid-template-columns: 50% 50%
+  grid-template-rows: 50% 50%
+  grid-template-areas: "file file" "yes no"
+  &__file
+    grid-area: file
+    button
+      width: 100%
+      height: 100%
+  &__yes
+    grid-area: yes
+    button
+      width: 100%
+      height: 100%
+  &__no
+    grid-area: no
+    button
+      width: 100%
+      height: 100%
+
+

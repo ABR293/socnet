@@ -1,37 +1,44 @@
 import React from "react";
-//import s from './ProfileInfo.module.css';
 import {createField, Input, Textarea} from "../../../Common/FormControls/FormControls";
-import {reduxForm} from "redux-form";
 import style from "../../../Common/FormControls/FormControls.module.css";
 import style2 from "./ProfileDataForm.module.css";
-import noAvatar from "../../../../img/NA2.gif";
+import {reduxForm} from "redux-form/";
 
 
+const ProfileForm = ({profile, close, saveProfile}) => {
 
 
-
-const ProfileDataForm = ({onSubmit, profile, error, close}) => {
-
-    const onMainPhotoSelected = (element) => {
-        element.target.files.length && profile.savePhoto(element.target.files[0]);
+    const onSubmit = (Data) => {
+        console.log(Data);
+        saveProfile(Data);
+        close();
     };
+
+    return <ProfileDataFormReduxForm
+        onSubmit={onSubmit}
+        initialValues={profile}
+        profile={profile}
+        close={close}
+        />
+};
+
+const ProfileDataForm = ({handleSubmit, profile, error, close}) => {
+
 
     return (
         <div>
-            <form className={style2.editForm} onSubmit={onSubmit}>
-
+            <form className={style2.editForm} onSubmit={handleSubmit}>
+                <div className={style2.submit}>
+                    <button  type='submit'>save</button>
+                    <button onClick={close}>Cancel</button>
+                </div>
                 {error && <div className={style.formSummaryError}>
                     {error}
                 </div>
                 }
-
-                <div className={style2.photo}>
-                    <img src={profile.avatar === null ? noAvatar : profile.avatar} alt="NICHT AVATAREN!!!"/>
-                    <input type="file" onChange={onMainPhotoSelected}/>
-                </div>
-
                 <div className={style2.about}>
-                    <div className={style2.item}>
+                    <h3>Information</h3>
+                <div className={style2.item}>
                     <b>Full name :</b> {createField("Full name", "fullName", [], Input)}
                 </div>
                 <div className={style2.item}>
@@ -63,14 +70,10 @@ const ProfileDataForm = ({onSubmit, profile, error, close}) => {
                     </div>
 
                 </div>
-                <div className={style2.submit}>
-                    <input type="submit" value='Save'/>
-                    <button name='cancel' onClick={close}>Cancel</button>
-                </div>
             </form>
         </div>)
 };
 
 const ProfileDataFormReduxForm = reduxForm({form: 'edit-profile'})(ProfileDataForm);
 
-export default ProfileDataFormReduxForm;
+export default ProfileForm;

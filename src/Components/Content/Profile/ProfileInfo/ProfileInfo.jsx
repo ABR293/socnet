@@ -1,33 +1,33 @@
 import React, {useState} from 'react';
 import style from "./Profileinfo.module.css";
-import noAvatar from "../../../../img/NA2.gif";
 import ProfileStatusWithHooks from "./../ProfileStatusHOOK";
-import ProfileDataForm from "./ProfileDataForm";
+import ProfileForm from "./ProfileDataForm";
 import Modal from "../../../Common/ModalWindow/ModalWindow";
 import ReactDOM from "react-dom";
+import PhotoAvatar from "./Photo/Photo";
 
 const ProfileInfo = (props) => {
+
     console.log(props);
-    let profile = {...props};
+    let profile = {
+            fullName: props.fullName,
+            lookingForAJob: props.lookingForAJob,
+            lookingForAJobDescription: props.lookingForAJobDescription,
+            aboutMe: props.aboutMe,
+            contacts: props.contacts,
+        }
+    ;
 
-    let onSubmit = (formData) =>{console.log(formData); debugger};
+    let [isEditOpen, setEditOpen] = useState(false);
 
-    let [editMode, setEditMode]  = useState(false);
-    let changeEditMode = () => {
-        editMode ? setEditMode(false) : setEditMode(true)};
-
-    let [isEditlOpen, setEditOpen] = useState(false);
-
-    let toggleEdit = () => {setEditOpen(!isEditlOpen)};
+    let toggleEdit = () => {setEditOpen(!isEditOpen)};
 
     return(
         <div className={style.info}>
             <div>
-                {isEditlOpen && ReactDOM.createPortal(
+                {isEditOpen && ReactDOM.createPortal(
                     <Modal>
-                       <ProfileDataForm
-                           onSubmit={onSubmit}
-                           initialValues={profile}
+                       <ProfileForm
                            profile={profile}
                            close={toggleEdit}
                            saveProfile={props.saveProfile}
@@ -37,12 +37,13 @@ const ProfileInfo = (props) => {
                     document.body
                 )}
             </div>
+
             <div className={style.avatar}>
-                <img src={props.avatar === null ? noAvatar : props.avatar} alt="NICHT AVATAREN!!!"/>
+                <PhotoAvatar avatar={props.avatar} savePhoto={props.savePhoto}/>
             </div>
             <div className={style.edit}>{props.isOwner && <button onClick={toggleEdit}>Edit Profile</button>}</div>
             <div className={style.name}>
-                <h3>{props.name}</h3>
+                <h3>{props.fullName}</h3>
             </div>
             <div className={style.status}>
                 <ProfileStatusWithHooks
@@ -56,8 +57,13 @@ const ProfileInfo = (props) => {
                     <p>{props.aboutMe}</p>
                 </div>}
                 <div className={style.lookingForAJob}>
-                    <h3>Locking for a job:{props.lookingForAJob}</h3>
-                    {props.lookingForAJob && <div>props.lookingForAJobDescription</div>}
+
+                    {props.lookingForAJob &&
+                    <div>
+                        <h3>Looking for a job</h3>
+                        <p>{props.lookingForAJobDescription}</p>
+                    </div>
+                    }
                 </div>
 
                 <div className={style.contactsBlock}>
@@ -77,6 +83,3 @@ const ProfileInfo = (props) => {
     )
 };
 export default ProfileInfo;
-
-
-{/*<input type="file" onChange={onMainPhotoSelected}/>*/}

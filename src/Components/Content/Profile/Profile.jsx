@@ -48,23 +48,23 @@ const Profile = (props) => {
 
 
     useEffect(() => {
-        document.title = props.name;
+        document.title = props.fullName;
     });
-
-    let arr1 = Object.keys(props.contacts);
-    console.log(arr1);
     return (
 
         <div className={style.profileBlock}>
             <ProfileInfo
                 isOwner={props.isOwner}
-                name={props.name}
+                fullName={props.fullName}
                 avatar={props.avatar}
                 status={props.status}
                 updateUserStatus={props.updateUserStatus}
                 contacts={props.contacts}
                 savePhoto={props.savePhoto}
                 saveProfile={props.saveProfile}
+                lookingForAJob={props.lookingForAJob}
+                lookingForAJobDescription={props.lookingForAJobDescription}
+                aboutMe={props.aboutMe}
             />
             <div className={style.newPost}>
                 <PostReduxForm onSubmit={onSubmit}/>
