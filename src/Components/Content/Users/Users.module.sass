@@ -1,3 +1,5 @@
+
+
 .userBlock
   border-bottom: solid 0.5px white
   margin: 5px 15px 5px 30px
@@ -8,6 +10,16 @@
   grid-template-columns: 60px auto 60px
   grid-gap: 4px
   grid-template-areas: "avatar name follow" "avatar status follow"
+  button
+    background-color: rgba(1,1,1,0)
+    color: white
+    border-radius: 5px
+    border: solid 0.8px #c5c5c8
+    transition-duration: 0.3s
+    outline: none
+    &:hover
+      border: solid 0.9px white
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
 
 .avatarBlock
   grid-area: avatar
@@ -41,7 +53,7 @@
   color: #fafaff
 .location
   color: darkslateblue
-.pageblock
+.pageBlock
   min-height: 20px
   min-width: 100px
   margin: 5px 5px 20px 5px

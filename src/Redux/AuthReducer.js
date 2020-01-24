@@ -47,12 +47,15 @@ export const authentication = () => async (dispatch) => {
         dispatch(setAuthUserData(data.data, true));
     }
 };
-export const login = (email, password, rememberMe) => async (dispatch) => {
-    let data = await authAPI.login(email, password, rememberMe);
+export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
+    let data = await authAPI.login(email, password, rememberMe, captcha);
 
     if (data.resultCode === 0) {
         dispatch(authentication())
     } else {
+        if (data.resultCode === 10){
+            dispatch(getCapthaURL())
+        }
         let action = stopSubmit('login', {_error: 'email or password is wrong'});
         dispatch(action);
     }

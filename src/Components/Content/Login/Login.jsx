@@ -33,9 +33,21 @@ const LoginForm = (props) => {
                     type='password'
                     placeholder='password'/>
             </div>
+
             <div className={style.checkbox}>
                 <p>Remember me</p>
-                <Field component={"input"} name={'rememberMe'} type={"checkbox"}/></div>
+                <Field component={"input"} name={'rememberMe'} type={"checkbox"}/>
+            </div>
+            <div>
+                {props.captchaURL && <img src={props.captchaURL} alt="ups! :("/>}
+                {props.captchaURL &&
+                <Field
+                    component={Input}
+                    validate={[required]}
+                    name='captcha'
+                    placeholder='captcha'
+                />}
+            </div>
             <div>
                 <button>Login</button>
             </div>
@@ -49,19 +61,20 @@ let LoginReduxForm = reduxForm({form: 'login'})(LoginForm);
 
 const LoginPage = (props) => {
     const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe);
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captcha);
     };
 
     return (
         props.isAuth ? <Redirect to={'profile/'}/> :
             <div className={style.login}>
                 <h1>Login</h1>
-                <LoginReduxForm onSubmit={onSubmit}/>
+                <LoginReduxForm onSubmit={onSubmit} captchaURL={props.captchaURL}/>
             </div>
     )
 };
 
 const mapStateToProps = (state) => ({
+    captchaURL: state.auth.captchaURL,
     isAuth: state.auth.isAuth,
 });
 

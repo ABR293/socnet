@@ -37,27 +37,24 @@ const ProfileDataForm = ({handleSubmit, profile, error, close}) => {
                 </div>
                 }
                 <div className={style2.about}>
-                    <h3>Information</h3>
-                <div className={style2.item}>
-                    <b>Full name :</b> {createField("Full name", "fullName", [], Input)}
-                </div>
-                <div className={style2.item}>
-                    <b>Looking for a job :</b> {createField("", "lookingForAJob", [], Input, {type: "checkbox"})}
-                </div>
+                    <h2>Information</h2>
+                    <div className={style2.item}>
+                        <b>Full name :</b> {createField("Full name", "fullName", [], Input)}
+                    </div>
+                    <div className={style2.item}>
+                        <b>Looking for a job :</b> {createField("", "lookingForAJob", [], Input, {type: "checkbox"})}
+                    </div>
 
-                <div className={style2.item}>
-                    <b>My professional skills :</b>
-                    {createField("My professional skills", "lookingForAJobDescription", [], Textarea)}
-                </div>
-
-
-                <div className={style2.item}>
-                    <b>About me :</b>
-                    {createField("About me", "aboutMe", [], Textarea)}
-                </div>
+                    <div className={style2.item}>
+                        <b>My skills :</b>
+                        {createField("My skills", "lookingForAJobDescription", [], Textarea)}
+                    </div>
+                    <div className={style2.item}>
+                        <b>About me :</b>
+                        {createField("About me", "aboutMe", [], Textarea)}
+                    </div>
                 </div>
                 <div className={style2.contacts}>
-
                     <h2>Contacts:</h2>
                     <div className={style2.contacts__block}>
                         {Object.keys(profile.contacts).map(key => {

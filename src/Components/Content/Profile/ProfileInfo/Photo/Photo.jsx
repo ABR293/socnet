@@ -33,27 +33,34 @@ const PhotoAvatar = (props) =>{
     };
 
     return (
-        <div className={style.block}>
-            <img src={photoURL === null ? noAvatar : photoURL} alt="NICHT AVATAREN!!!"/>
+        <>
             {!editMode
                 ?
-                <div className={style.block__btn}>
-                    <button onClick={toggleEditMode}>Change Photo</button>
+                <div className={style.block}>
+                    <img src={photoURL === null ? noAvatar : photoURL} alt="NICHT AVATAREN!!!"/>
+                    <div className={style.block__btn}>
+                        <button onClick={toggleEditMode}>Change Photo</button>
+                    </div>
                 </div>
                 :
-                <div className={style.menu}>
-                    <input
-                        className={style.menu__file}
-                        type="file"
-                        name='photo'
-                        ref={photoEl}
-                        onChange={onMainPhotoSelected}
-                    />
-                    <button className={style.menu__yes} onClick={onSavePhoto}>OK</button>
-                    <button className={style.menu__no} onClick={onCancelSavePhoto}>Cancel</button>
+                <div className={style.block2}>
+                    <img src={photoURL === null ? noAvatar : photoURL} alt="NICHT AVATAREN!!!"/>
+                    <div className={style.menu}>
+                        <div className={style.menu__file}>
+                            Выберите файл
+                            <input
+                                type="file"
+                                name='photo'
+                                ref={photoEl}
+                                onChange={onMainPhotoSelected}
+                            />
+                        </div>
+                        <button className={style.menu__yes} onClick={onSavePhoto}>OK</button>
+                        <button className={style.menu__no} onClick={onCancelSavePhoto}>Cancel</button>
+                    </div>
                 </div>
             }
-        </div>
-  )
+        </>
+    )
 };
 export default PhotoAvatar;

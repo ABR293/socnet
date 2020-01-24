@@ -19,8 +19,6 @@ let initialState = {
 
 };
 
-
-
 export const userReducer = (state = initialState, action) => {
 
     switch (action.type) {
@@ -111,10 +109,9 @@ const toggleFollowUser = async(dispatch, APIMethod, ActionCreator, id) => {
 };
 
 export const unfollowUser = (id) => {
-    return async (dispatch) => toggleFollowUser(dispatch, id, userAPI.unfollowUser.bind(userAPI), unfollow)
+    return async (dispatch) => toggleFollowUser(dispatch, userAPI.unfollowUser.bind(userAPI), unfollow, id)
 };
 
-
 export const followUser = (id) => {
-    return async (dispatch) => toggleFollowUser(dispatch, id, userAPI.followUser.bind(userAPI), follow)
+    return async (dispatch) => toggleFollowUser(dispatch, userAPI.followUser.bind(userAPI), follow, id)
 };
