@@ -1,0 +1,105 @@
+
+
+.userBlock
+  border-bottom: solid 0.5px white
+  margin: 5px 15px 5px 30px
+  height: 60px
+  width: 90%
+  display: grid
+  grid-template-rows: 30px 25px
+  grid-template-columns: 60px auto 100px
+  grid-gap: 4px
+  grid-template-areas: "avatar name follow" "avatar status follow"
+  button
+    background-color: rgba(1,1,1,0)
+    color: white
+    border-radius: 5px
+    border: solid 0.8px #c5c5c8
+    transition-duration: 0.3s
+    outline: none
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5px 8px 5px 8px
+    width: 100%
+    &:hover
+      border: solid 0.9px white
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+    div
+      margin: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      p
+        margin: 0 2px 0 2px
+      img
+        width: 15px
+        height: 15px
+        margin: 2px
+
+.avatarBlock
+  grid-area: avatar
+.avatar
+  margin: 0
+  width: 55px
+  height: 55px
+  border-radius: 50%
+.followBtn
+  grid-area: follow
+  height: 20px
+  margin: 0
+
+.infoBlock
+  margin: 10px
+  width: 80%
+  height: 80px
+  border-style: solid
+  border-width: 2px
+  border-color: #004291
+  border-radius: 10px
+.name
+  grid-area: name
+  justify-content: flex-start
+  align-items: center
+  color: white
+  font-weight: bold
+  font-size: 15px
+.status
+  grid-area: status
+  color: #fafaff
+.location
+  color: darkslateblue
+.pageBlock
+  min-height: 20px
+  min-width: 100px
+  margin: 5px 5px 20px 5px
+  display: flex
+  justify-content: center
+  align-items: center
+.pageIndex
+  margin: 3px
+  width: 18px
+  height: 22px
+  border-color: #424244
+  border-style: solid
+  border-width: 0.5px
+  background-color: white
+  display: flex
+  align-items: center
+  justify-content: center
+  outline: none
+  &__selected
+    background-color: coral
+    color: black
+    font-weight: bold
+    font-size: 12px
+    margin: 1px
+    width: 17px
+    height: 22px
+    border-color: #424244
+    border-style: solid
+    border-width: 0.5px
+    display: flex
+    align-items: center
+    justify-content: center
+    outline: none

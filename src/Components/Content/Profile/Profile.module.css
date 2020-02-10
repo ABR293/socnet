@@ -1,28 +1,17 @@
-.info {
-  display: flex;
+.profileBlock {
   width: 100%;
-  height: 80px; }
+  height: 100%; }
 
-.avatar {
-  width: 50px;
-  height: 70px;
-  background-color: darkred;
-  margin: 5px 20px 5px 10px; }
+.newPost__inputblock {
+  width: 90%;
+  margin: 5px 5% 5px 3%; }
+.newPost__add {
+  margin: 0 5% 5px 80%;
+  width: 80px;
+  background-color: #004291;
+  color: white; }
 
-.name {
-  margin: 5px 30% 5px 30%;
-  font-size: 20px;
-  color: darkslateblue; }
-
-.newPost {
-  width: 100%; }
-  .newPost__inputblock {
-    width: 90%;
-    margin: 5px 5% 5px 3%; }
-  .newPost__add {
-    margin: 0 5% 5px 80%;
-    width: 80px;
-    background-color: #004291;
-    color: white; }
+.post {
+  color: #090909; }
 
 /*# sourceMappingURL=Profile.module.css.map */

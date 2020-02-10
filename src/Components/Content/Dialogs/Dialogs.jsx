@@ -1,40 +1,89 @@
-import React, {Component} from 'react';
+import React, {useEffect} from 'react';
 import style from './Dialogs.module.css';
 import Contact from "./Contact";
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import Messages from "./Messages";
+import {Field, reduxForm} from "redux-form";
+import {Input} from "../../Common/FormControls/FormControls";
+import {maxlengthCreator} from "../../../Utils/Validators/Validators";
+import {getDialogs} from "../../../Redux/DialogReducer";
+
+const maxlength30 = maxlengthCreator(30);
+
+const DialogForm = (props) => {
+
+    useEffect(() => {
+        document.title = `Dialogs`;
+    });
+
+    let onGetDialogs = () => {
+        getDialogs();
+    };
+
+    return(
+        <>
+            <button
+                onClick={onGetDialogs()}
+            >
+                get Dialogs
+            </button>
+
+            <form onSubmit={props.handleSubmit}>
+                <Field
+                    className={style.inputblock}
+                    component={Input}
+                    validate={[maxlength30]}
+                    name='newMessage'
+                    placeholder='Write your message...'
+                    type='text'
+                />
+                <button className={style.sendbtn}
+                >
+                    Send message
+                </button>
+            </form>
+        </>
+    )
+};
+
+let DialogReduxForm = reduxForm({form: 'newMessage'})(DialogForm);
 
 
-export default class Dialogs extends Component {
-    render() {
-        let Adress = this.props.dialogs.map( (el)=>{
+const Dialogs = (props) => {
+        let Dialogs = props.messageData.map( (el)=>{
             return(
-                <Contact name={el.name}  id={el.id}/>
+                <Contact name={el.name}  id={el.id} key={el.id}/>
                 )
             }
         );
-        let Messedges = this.props.dialogs.map( (el)=>{
+        let Messedges = props.messageData.map( (el)=>{
                 return(
-                    <Route path={'/dialogs/'+ el.id} component={() => <Messages messages={el.messages}/>}/>
+                    <Route path={'/dialogs/'+ el.id} key={el.id}
+                           render={() => <Messages messages={el.messages}/>}/>
                 )
             }
         );
+
+
+        const sendMessage = (values) => {
+            props.sendMessage(values.newMessage)
+        };
 
         return (
-            //<BrowserRouter>
             <div className={style.content}>
-                <div className={style.header}>Dialogs</div>
+                <div className={style.header}><h5>Dialogs</h5></div>
                 <div className={style.dialogs}>
-                    {Adress}
+                    {Dialogs}
                 </div>
-                <div className={style.separator}> </div>
                 <div className={style.dialog}>
                     {Messedges}
+                    <div>
+                       <DialogReduxForm onSubmit={sendMessage}/>
+                    </div>
                 </div>
-            </div>
-            //</BrowserRouter>
 
-        )
-    }
-}
+            </div>
+        );
+};
+export default Dialogs;
 

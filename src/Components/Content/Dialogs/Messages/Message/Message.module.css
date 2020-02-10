@@ -9,7 +9,7 @@
   width: 30px;
   position: relative;
   margin: 5px;
-  background-color: coral;
+  background-color: red;
   border-radius: 50%; }
 
 .icon {
@@ -35,7 +35,7 @@
   min-height: 30px;
   margin: 1px 1px 1px 5px; }
   .message__text {
-    color: blue;
+    color: white;
     font-size: 9px; }
 
 /*# sourceMappingURL=Message.module.css.map */

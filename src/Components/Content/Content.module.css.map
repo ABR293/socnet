@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,QAAQ;EACN,SAAS,EAAE,OAAO;EAClB,aAAa,EAAE,KAAK;EACpB,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI",
-"sources": ["Content.module.sass"],
+"mappings": "AAEA,QAAQ;EACN,SAAS,EAAE,OAAO;EAClB,aAAa,EAAE,KAAK;EACpB,gBAAgB,ECLT,OAAO;EDMd,KAAK,EAAE,IAAI;EACX,QAAQ,EAAE,IAAI",
+"sources": ["Content.module.sass","../Common/_vars.sass"],
 "names": [],
 "file": "Content.module.css"
 }

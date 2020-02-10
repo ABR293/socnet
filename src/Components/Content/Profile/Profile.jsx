@@ -1,59 +1,101 @@
-import React, {Component} from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './Profile.module.css';
 import Post from './Post';
-import {addPostCreator, changeTextCreator} from "../../../Redux/State";
+import {Field, reduxForm} from "redux-form";
+import {maxlengthCreator} from '../../../Utils/Validators/Validators'
+import {Textarea} from "../../Common/FormControls/FormControls";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+//import noAvatar from "../../../img/NA2.gif";
+import ProfileForm from "./ProfileInfo/ProfileDataForm";
+//import {Contacts} from "./Contacts"
 
 
+const PostForm = (props) => {
+
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <Field
+                component={Textarea}
+                name='postText'
+                placeholder='Add new post...'
+                validate={[ maxlengthCreator(50)]}
+                className={style.newPost__inputblock}/>
+
+            <button
+
+                className={style.newPost__add}>
+                Add Post
+            </button>
+        </form>
+    )
+};
+
+const PostReduxForm = reduxForm({form: 'newPost'})(PostForm);
 
 
-export default class Profile extends Component {
-    render() {
+const Profile = (props) => {
 
-        //this.props.addPost('URA!!! URAAeeeee!! URA!!!');
+    useEffect(() => {
+        document.title = props.fullName;
+    });
 
+    const onSubmit = (values) => {
+        props.addNewPost(values.postText)
+    };
 
-
-
-
-        let Posts = this.props.profile[0].posts.map((post) =>{
-            return(
-                <Post text={post.message}/>
-            );
-        });
-
-        let newPostText = React.createRef();
-        let AddNewPost = () => {
-            let text = this.props.profile[0].PostText;
-            this.props.dispatch(addPostCreator(text));
-            this.props.dispatch(changeTextCreator(''));
-            //this.props.addPost(text);
-            //this.props.changePostText('');
-        };
-
-        let onPostChange = ()=>{
-            let text = newPostText.current.value;
-            this.props.dispatch(changeTextCreator(text));
-            //this.props.changePostText(text);
-            console.log(text);
-
-        };
-
+    let Posts = props.posts.map((post) => {
         return (
+            <Post key={post.id} text={post.message}/>
+        );
+    });
 
+    let [isEditOpen, setEditOpen] = useState(false);
 
-            <div>
-                <div className={style.info}>
-                    <img className={style.avatar} src={require("./s111200.png")} alt="NICHT AVATAREN!!!"/>
-                    <h1 className={style.name}>{this.props.profile[0].name}</h1>
-                </div>
-                <div className={style.newPost}>
-                    <textarea autoFocus={true} ref={newPostText} onChange={onPostChange} className={style.newPost__inputblock} value={this.props.profile[0].PostText}/>
-                    <button onClick={AddNewPost} className={style.newPost__add}>Add Post</button>
-                </div>
-                <div className='3'>
-                    {Posts}
-                </div>
-            </div>
-        )
-    }
-}
+    let toggleEdit = () => {
+        setEditOpen(!isEditOpen)
+    };
+    let profile = {
+        fullName: props.fullName,
+        lookingForAJob: props.lookingForAJob,
+        lookingForAJobDescription: props.lookingForAJobDescription,
+        aboutMe: props.aboutMe,
+        contacts: props.contacts,
+    };
+    return (
+
+        <div className={style.profileBlock}>
+            {!isEditOpen
+                ?
+                <>
+                    <ProfileInfo
+                        isOwner={props.isOwner}
+                        fullName={props.fullName}
+                        avatar={props.avatar}
+                        status={props.status}
+                        updateUserStatus={props.updateUserStatus}
+                        contacts={props.contacts}
+                        savePhoto={props.savePhoto}
+                        saveProfile={props.saveProfile}
+                        lookingForAJob={props.lookingForAJob}
+                        lookingForAJobDescription={props.lookingForAJobDescription}
+                        aboutMe={props.aboutMe}
+                        openEdit={toggleEdit}
+                    />
+                    <div className={style.newPost}>
+                        <PostReduxForm onSubmit={onSubmit}/>
+                    </div>
+                    <div className='3'>
+                        {Posts}
+                    </div>
+                </>
+                :
+                <ProfileForm
+                    profile={profile}
+                    close={toggleEdit}
+                    saveProfile={props.saveProfile}
+                />}
+        </div>
+    )
+};
+
+export default Profile;

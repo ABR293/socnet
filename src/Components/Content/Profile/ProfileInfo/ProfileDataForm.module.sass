@@ -1,0 +1,39 @@
+.editForm
+  height: 100%
+  width: 100%
+  display: grid
+  grid-template-rows: 5fr 20px
+  grid-template-columns: 1fr 1fr
+  grid-gap: 5px
+  grid-template-areas: 'about contacts''none submit'
+  color: white
+  padding: 8px
+.about
+  grid-area: about
+.contacts
+  grid-area: contacts
+  &__block
+    display: flex
+    flex-flow: wrap
+.submit
+  grid-area: submit
+  height: 30px
+  padding: 10px
+  button
+    background-color: rgba(1,1,1,0)
+    color: white
+    border-radius: 5px
+    border: solid 0.8px #c5c5c8
+    transition-duration: 0.3s
+    margin: 30px 15px 0 15px
+    outline: none
+    &:hover
+      border: solid 0.9px white
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+.item
+  width: 250px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  padding: 5px

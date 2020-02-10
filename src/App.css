@@ -1,10 +1,15 @@
 .app {
+  position: absolute;
+  bottom: 5px;
+  top: 5px;
+  left: 3%;
+  right: 3%;
   height: 100%;
   width: 90%;
   margin: 0 3vw 0 3vw;
   display: grid;
-  grid-template-rows: 60px auto 60px;
-  grid-template-columns: 30% auto;
+  grid-template-rows: 10% 80% 5%;
+  grid-template-columns: 150px auto;
   grid-column-gap: 2vw;
   grid-row-gap: 2vh;
   grid-template-areas: "header header" "navbarblock content" "footer footer"; }

@@ -1,5 +1,7 @@
+@import './../Common/vars'
+
 .header
-  background-color: #00b800
+  background-color: $color1
   border-radius: 1vmax
   display: flex
   justify-content: flex-start
@@ -18,4 +20,39 @@
     font-weight: bold
     font-family: "Times New Roman"
     margin: auto
+.loginBlock
+  border-style: solid
+  border-width: 1px
+  border-radius: 5px
+  border-color: white
+  margin: 5px
+  height: 25px
+  width: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    border-width: 1px
+    border-color: white
 
+.loginBlock a
+  color: white
+  &:hover
+    border-width: 1px
+    border-color: white
+.userBlock
+  background-color: #223b6d
+  color: #ff572b
+  width: 160px
+  height: 30px
+  font-size: 20px
+  margin: 7px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  border-radius: 5px
+.logout
+  background-color: #3995ff
+  color: #000b44
+  font-weight: bold
+  margin: 5px

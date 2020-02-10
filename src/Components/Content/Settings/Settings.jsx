@@ -1,13 +1,19 @@
-import React, {Component} from 'react';
-import style from './Settings.module.css';
+import React, {useEffect} from 'react';
+//import style from './Settings.module.css';
+
+const Settings = () => {
+
+    useEffect(() => {
+        document.title = `Settings`;
+    });
+
+    return (
+        <div>
+            <p>ТУТ БУДУТ НАСТРОЙКИ</p>
+        </div>
+    )
+};
+
+export default Settings
 
 
-export default class Settings extends Component {
-    render() {
-        return (
-            <div>
-                <p>ТУТ БУДУТ НАСТРОЙКИ</p>
-            </div>
-        )
-    }
-}

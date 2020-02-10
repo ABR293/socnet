@@ -1,8 +1,8 @@
 .content {
   grid-area: content;
   border-radius: 1vmax;
-  background-color: aqua;
+  background-color: #2060b8;
   width: 100%;
-  height: auto; }
+  overflow: auto; }
 
 /*# sourceMappingURL=Content.module.css.map */
