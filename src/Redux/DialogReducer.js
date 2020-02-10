@@ -1,13 +1,17 @@
+import {dialogsAPI} from "../API/API";
+
 const SEND_MESSAGE = "socNet/dialog/SEND-MESSAGE";
 const CHANGE_MESSAGE_TEXT = "socNet/dialog/CHANGE-MESSAGE-TEXT";
+const SET_DIALOGS = "socNet/dialog/SET-DIALOGS";
 
 
-
-export let changeMessageTextCreator = (text) => ({type: CHANGE_MESSAGE_TEXT, text: text });
-export let SendMessageCreator = (message) => ({type: SEND_MESSAGE, message: message });
+export const changeMessageTextCreator = (text) => ({type: CHANGE_MESSAGE_TEXT, text: text });
+export const SendMessageCreator = (message) => ({type: SEND_MESSAGE, message: message });
+export const setDialogs = (data) => ({type: SET_DIALOGS, data});
 
 
 let initialState = {
+
     messageData:
         [
             {
@@ -59,12 +63,21 @@ export const dialogsReducer = (state = initialState, action) => {
             console.log("You send:" + action.message);
             return state;
         }
+        case SET_DIALOGS: {
+            console.log(getDialogs());
+            return state;
+        }
+
         default: {
             return state;
         }
     }
 };
 
+export const getDialogs = () => async(dispatch) =>{
+    let response  = await dialogsAPI.getDialogs();
+    console.log(response);
+};
 
 
 

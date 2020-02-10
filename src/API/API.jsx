@@ -91,3 +91,19 @@ export const securityAPI = {
     }
 };
 
+export const dialogsAPI = {
+    getDialogs(){
+        return instance.get(`dialogs/`);
+    },
+    getDialog(id){
+        return instance.get(`dialogs/${id}/messages`);
+    },
+    startChating(id){
+        return instance.put(`dialogs/${id}`);
+    },
+    sendTheMessage(id, message){
+        return instance.post(`dialogs/${id}/messages`,message);
+    },
+};
+
+

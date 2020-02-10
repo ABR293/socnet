@@ -7,7 +7,7 @@
   width: 90%
   display: grid
   grid-template-rows: 30px 25px
-  grid-template-columns: 60px auto 90px
+  grid-template-columns: 60px auto 100px
   grid-gap: 4px
   grid-template-areas: "avatar name follow" "avatar status follow"
   button
@@ -21,7 +21,7 @@
     justify-content: center
     align-items: center
     padding: 5px 8px 5px 8px
-    width: 90px
+    width: 100%
     &:hover
       border: solid 0.9px white
       box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
@@ -32,9 +32,10 @@
       align-items: center
       p
         margin: 0 2px 0 2px
-      span
-        transform: rotate(720deg)
-        transition-duration: 2s
+      img
+        width: 15px
+        height: 15px
+        margin: 2px
 
 .avatarBlock
   grid-area: avatar

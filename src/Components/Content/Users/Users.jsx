@@ -3,64 +3,7 @@ import style from "./Users.module.css";
 import {NavLink} from "react-router-dom";
 import noAvatar from "../../../img/NA5.jpg";
 import Paginator from "../../Common/Paginator/Paginator";
-import {follow} from "../../../Redux/UsersReducer";
-
-
-
-/*
-let Users = ({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
-              currentPage, followUser, unfollowUser, isFetching, isFollowing}) => {
-        console.log({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
-            currentPage, followUser, unfollowUser, isFetching, isFollowing});
-
-    useEffect(() => {
-        document.title = `Users`;
-    });
-
-    return (
-        <div>
-            <div className={style.pageBlock}>
-                <Paginator currentPage={currentPage} onPageChanged={onPageChanged}
-                           totalItemsCount={totalUserCount} pageSize={pageSize}/>
-            </div>
-            <div>
-                {(users.map((user) =>
-                    <div key={user.id} className={style.userBlock}>
-                        <div className={style.avatarBlock}>
-                            <NavLink to={'/profile/' + user.id}>
-                                <img className={style.avatar}
-                                     src={user.photos.small != null ?
-                                         user.photos.small : noAvatar}
-                                     alt=""/>
-                            </NavLink>
-                        </div>
-                        {user.followed
-                            ? <button
-                                //className={style.followBtn}
-                                disabled={isFollowing.some(id => id === user.id)}
-                                onClick={() => {
-                                    unfollowUser(user.id);
-                                }}>UnFollow</button>
-
-                            : <button
-                                //className={style.followBtn}
-                                disabled={isFollowing.some(id => id === user.id)}
-                                onClick={() => {
-                                    followUser(user.id)
-                                }}
-                            >Follow</button>}
-                        <div className={style.name}>{user.name}</div>
-                        <div className={style.status}>{user.status}</div>
-                        {/!*<div className={style.location}></div>*!/}
-                    </div>))
-                }
-            </div>
-        </div>
-    );
-};
-
-export default Users;
-*/
+import loading from '../../Common/loading.svg'
 
 
 
@@ -129,7 +72,7 @@ const User = (props) => {
                     {props.isFollowing.some(id => id === props.id) ?
                         <div>
                             {followed ? <p>Following</p> : <p>Unfollowing</p>}
-                            <span>F</span>
+                            <img src={loading} alt={''}/>
                         </div>
                         :
                         <div>
@@ -144,14 +87,5 @@ const User = (props) => {
         </div>)
 };
 
-// {(props.isFollowing.some(id => id === props.id)& followed)
-// && <div><p>Following</p><p>F</p></div>}
-{/*}*/}
-{/*{(props.isFollowing.some(id => id === props.id) & !followed)*/}
-{/*&& <div><p>Unfollowing</p><p>F</p></div>*/}
-{/*}*/}
-{/*{!props.isFollowing.some(id => id === props.id) &&*/}
-{/*<div>{!followed ? <p>Follow</p> : <p>Unfollow</p>}</div>*/}
-{/*}*!/*/}
 export default Users;
 
