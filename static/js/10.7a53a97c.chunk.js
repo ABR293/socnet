@@ -1,0 +1,2 @@
+(window.webpackJsonpsocnet=window.webpackJsonpsocnet||[]).push([[10],{319:function(e,n,t){"use strict";t.r(n);var c=t(0),u=t.n(c),o=function(){return Object(c.useEffect)((function(){document.title="Settings"})),u.a.createElement("div",null,u.a.createElement("p",null,"\u0422\u0423\u0422 \u0411\u0423\u0414\u0423\u0422 \u041d\u0410\u0421\u0422\u0420\u041e\u0419\u041a\u0418"))};n.default=o}}]);
+//# sourceMappingURL=10.7a53a97c.chunk.js.map
