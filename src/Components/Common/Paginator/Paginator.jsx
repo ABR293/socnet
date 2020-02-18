@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from "./Paginator.module.css";
 import cn from "classnames";
+//import 'font-awesome/css/font-awesome.min.css';
 
 let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
     console.log({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize});
@@ -25,7 +26,7 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
                 <button className={styles.active}
                     onClick={() => {
                         setPortionNumber(portionNumber - 1)
-                    }}>P
+                    }}> <i className="fa fa-book" aria-hidden="true"> </i>
                 </button>
                 :
                 <div >P</div>

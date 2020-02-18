@@ -27,15 +27,15 @@ const Content = () => {
             <Route path='/profile/:userId?'
                    render={() => <Suspense fallback={<Preloader/>}><ProfileContainer/></Suspense>}
             />
-            <Route path='/news'
-                   render={() => <Suspense fallback={<Preloader/>}><News/></Suspense>}
-            />
-            <Route path='/music'
-                   render={() => <Suspense fallback={<Preloader/>}><Music/></Suspense>}
-            />
-            <Route path='/settings'
-                   render={() => <Suspense fallback={<Preloader/>}><Settings/></Suspense>}
-            />
+            {/*<Route path='/news'*/}
+                   {/*render={() => <Suspense fallback={<Preloader/>}><News/></Suspense>}*/}
+            {/*/>*/}
+            {/*<Route path='/music'*/}
+                   {/*render={() => <Suspense fallback={<Preloader/>}><Music/></Suspense>}*/}
+            {/*/>*/}
+            {/*<Route path='/settings'*/}
+                   {/*render={() => <Suspense fallback={<Preloader/>}><Settings/></Suspense>}*/}
+            {/*/>*/}
             <Route path='/users'
                    render={() => <Suspense fallback={<Preloader/>}><UsersContainer/></Suspense>}
             />

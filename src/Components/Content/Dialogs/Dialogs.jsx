@@ -22,12 +22,6 @@ const DialogForm = (props) => {
 
     return(
         <>
-            <button
-                onClick={onGetDialogs()}
-            >
-                get Dialogs
-            </button>
-
             <form onSubmit={props.handleSubmit}>
                 <Field
                     className={style.inputblock}
