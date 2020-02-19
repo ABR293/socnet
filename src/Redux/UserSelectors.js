@@ -8,7 +8,6 @@ export const getUsersList = (state) => {
 };
 export const getUsersListSuper = createSelector(getUsers,
     (users) => {
-        console.log('getUsersSuper active');
         return users.filter(u => true);
     });
 export const getPageSize = (state) => {

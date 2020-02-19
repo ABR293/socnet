@@ -14,9 +14,9 @@ const ProfileContainer = React.lazy(() => import("./Profile/ProfileContainer"));
 const DialogsContainer = React.lazy(() => import("./Dialogs/DialogsContainer"));
 const UsersContainer = React.lazy(() => import("./Users/UsersContainer"));
 const Login = React.lazy(() => import("./Login"));
-const Music = React.lazy(() => import("./Music"));
-const News = React.lazy(() => import("./News"));
-const Settings = React.lazy(() => import("./Settings"));
+//const Music = React.lazy(() => import("./Music"));
+//const News = React.lazy(() => import("./News"));
+//const Settings = React.lazy(() => import("./Settings"));
 
 const Content = () => {
     return (

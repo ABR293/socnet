@@ -9,8 +9,6 @@ import loading from '../../Common/loading.svg'
 
 let Users = ({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
                  currentPage, followUser, unfollowUser, isFetching, isFollowing}) => {
-    console.log({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,
-        currentPage, followUser, unfollowUser, isFetching, isFollowing});
 
     useEffect(() => {
         document.title = `Users`;
