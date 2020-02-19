@@ -8,7 +8,7 @@ import {Redirect} from "react-router-dom";
 import {login} from "../../../Redux/AuthReducer";
 
 const maxlength20 = maxlengthCreator(20);
-const minlength5 = minlengthCreator(5);
+const minlength4 = minlengthCreator(3);
 
 const LoginForm = (props) => {
 
@@ -21,14 +21,14 @@ const LoginForm = (props) => {
             <div className={style.input}>
                 <Field
                     component={Input}
-                    validate={[required, maxlength20, minlength5]}
+                    validate={[required, maxlength20, minlength4]}
                     name='email'
                     placeholder='email'/>
             </div>
             <div className={style.input}>
                 <Field
                     component={Input}
-                    validate={[required, minlength5, maxlength20]}
+                    validate={[required, minlength4, maxlength20]}
                     name='password'
                     type='password'
                     placeholder='password'/>

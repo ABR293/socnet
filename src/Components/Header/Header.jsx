@@ -7,7 +7,7 @@ let Header = (props) => {
     return (
         <header className={style.header}>
             <img className={style.header__logo} src={require("./../../img/Logo.png")} alt="Logo"/>
-            <p className={style.header__name}>Name of SocNet</p>
+            <p className={style.header__name}>React-Samurai`s Way</p>
             {props.isAuth ?
                 <div className={style.userBlock}>
                     <div>{props.login}</div>
