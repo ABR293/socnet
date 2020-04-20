@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import styles from "./Paginator.module.css";
 import cn from "classnames";
+import 'font-awesome/css/font-awesome.min.css';
+
 
 let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
-    console.log({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize});
+
     let pagesCount = Math.ceil(totalItemsCount / pageSize);
 
     let pages = [];
@@ -25,10 +27,10 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
                 <button className={styles.active}
                     onClick={() => {
                         setPortionNumber(portionNumber - 1)
-                    }}>P
+                    }}> <i className="fa fa-chevron-left" aria-hidden="true"> </i>
                 </button>
                 :
-                <div >P</div>
+                <div><i className="fa fa-chevron-left" aria-hidden="true"> </i> </div>
             }
             </div>
 
@@ -51,10 +53,10 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
                 <button className={styles.active}
                     onClick={() => {
                         setPortionNumber(portionNumber + 1)
-                    }}>N
+                    }}><i className="fa fa-chevron-right" aria-hidden="true"> </i>
                 </button>
                 :
-                <div>N</div>
+                <div><i className="fa fa-chevron-right" aria-hidden="true"> </i></div>
             }
             </div>
         </div>)

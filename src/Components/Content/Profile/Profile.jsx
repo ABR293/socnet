@@ -22,7 +22,6 @@ const PostForm = (props) => {
                 className={style.newPost__inputblock}/>
 
             <button
-
                 className={style.newPost__add}>
                 Add Post
             </button>

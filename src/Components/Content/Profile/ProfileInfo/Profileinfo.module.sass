@@ -1,10 +1,12 @@
+@import ../../../Common/_vars
+
 
 .info
   min-height: 180px
   margin: 5px
   width: 90%
   display: grid
-  grid-template-rows: 30px 20px  auto
+  grid-template-rows: 40px auto  auto
   grid-template-columns: 155px auto
   grid-gap: 5px
   grid-template-areas: "avatar name" "avatar status" "avatar infoData" "edit infoData"
@@ -27,19 +29,12 @@
   font-weight: bold
   font-size: 28px
   button
-    background-color: rgba(1,1,1,0)
-    color: white
-    border-radius: 5px
-    border: solid 0.8px #c5c5c8
-    transition-duration: 0.3s
-    padding: 2px
-    outline: none
-    &:hover
-      border: solid 0.9px white
-      box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+    @extend %button
 .status
+  min-height: 30px
   grid-area: status
   border-bottom: solid 0.5px #f8f0ff
+  overflow: auto
 .infoData
   grid-area: infoData
   color: white

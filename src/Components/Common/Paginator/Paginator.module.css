@@ -1,0 +1,52 @@
+.prev, .next {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .prev div, .next div {
+    width: 5px;
+    color: #8a8a8a; }
+
+.paginator {
+  height: 50px;
+  display: grid;
+  grid-template-areas: "prev items next";
+  grid-template-rows: 50px;
+  grid-gap: 2px;
+  justify-items: center;
+  align-items: center; }
+  .paginator button {
+    width: 30px;
+    outline: none;
+    background-color: rgba(1, 1, 1, 0);
+    color: #ffffff;
+    border: solid 1px rgba(1, 1, 1, 0); }
+
+.prev {
+  grid-area: prev; }
+
+.items {
+  grid-area: items; }
+
+.next {
+  grid-area: next; }
+
+.pageNumber {
+  padding: 2px;
+  border: solid 1px #ffffff;
+  border-radius: 2px;
+  min-width: 20px;
+  height: 30px;
+  margin: 1px;
+  color: white; }
+
+.pageNumber.selectedPage {
+  padding: 3px;
+  font-weight: bold;
+  border: solid 2px #ffffff;
+  min-width: 20px;
+  height: 30px;
+  margin: 1px;
+  color: white; }
+
+/*# sourceMappingURL=Paginator.module.css.map */

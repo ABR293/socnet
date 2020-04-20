@@ -1,7 +1,7 @@
 import React from 'react';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from "react-dom";
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import App from "./App";
 import store from "./Redux/Store";
 import {Provider} from "react-redux"
@@ -9,11 +9,11 @@ import {Provider} from "react-redux"
 
 export let rerenderEntireTree = () => {
     ReactDOM.render(
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <Provider store={store}>
                 <App/>
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
         , document.getElementById('root'));
 };
 

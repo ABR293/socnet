@@ -6,7 +6,7 @@ import Messages from "./Messages";
 import {Field, reduxForm} from "redux-form";
 import {Input} from "../../Common/FormControls/FormControls";
 import {maxlengthCreator} from "../../../Utils/Validators/Validators";
-import {getDialogs} from "../../../Redux/DialogReducer";
+//import {getDialogs} from "../../../Redux/DialogReducer";
 
 const maxlength30 = maxlengthCreator(30);
 
@@ -16,18 +16,8 @@ const DialogForm = (props) => {
         document.title = `Dialogs`;
     });
 
-    let onGetDialogs = () => {
-        getDialogs();
-    };
-
     return(
         <>
-            <button
-                onClick={onGetDialogs()}
-            >
-                get Dialogs
-            </button>
-
             <form onSubmit={props.handleSubmit}>
                 <Field
                     className={style.inputblock}

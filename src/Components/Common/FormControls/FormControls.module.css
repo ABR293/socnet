@@ -1,0 +1,9 @@
+.formControl {
+  color: black; }
+
+.error input textarea {
+  border: solid red 5px; }
+.error span {
+  color: red; }
+
+/*# sourceMappingURL=FormControls.module.css.map */

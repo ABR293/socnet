@@ -1,3 +1,15 @@
+.sendbtn {
+  background-color: rgba(1, 1, 1, 0);
+  color: white;
+  border-radius: 5px;
+  border: solid 0.8px #c5c5c8;
+  transition-duration: 0.3s;
+  padding: 2px;
+  outline: none; }
+  .sendbtn:hover {
+    border: solid 0.9px white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+
 .content {
   grid-area: content;
   background-color: #2060b8;
@@ -36,8 +48,6 @@
 
 .sendbtn {
   margin: 0 5% 5px 80%;
-  width: 80px;
-  background-color: #004291;
-  color: white; }
+  width: 80px; }
 
 /*# sourceMappingURL=Dialogs.module.css.map */
