@@ -16,7 +16,7 @@ type UsersPropsTypes = {
     followUser : (id: number) => void
     unFollowUser : (id: number) => void
     isFetching : boolean
-    isFollowing : boolean
+    isFollowing : Array<any>
 }
 
 let Users : React.FC<UsersPropsTypes> = ({totalUserCount, fixSrc, pages, pageSize, onPageChanged, users,

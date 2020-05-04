@@ -53,7 +53,7 @@ class UsersConteiner extends React.Component<PropsType> {
 
     onPageChanged = (page:number) => {
         this.props.getUsers(page, this.props.pageSize);
-        this.props.changePage(page);
+        
     };
     
     
@@ -111,7 +111,7 @@ let mapStateToProps = (state:AppStateType):MapStatePropsType => {
 };
 
 export default compose(
-    connect<MapStatePropsType, MapDispatchPropsType, AppStateType> (mapStateToProps, 
+    connect  (mapStateToProps, 
     {
         followUser,
         setUsers,
