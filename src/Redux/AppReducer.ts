@@ -1,4 +1,5 @@
 import {authentication} from "./AuthReducer";
+import { Dispatch } from "redux";
 
 
 const SET_INITIALIZE = 'socNet/app/SET-INITIALIZE';
@@ -35,7 +36,7 @@ type InitializedSuccesActionType = {
 export const initializedSucces = () => ({type: SET_INITIALIZE});
 
 
-export const initializeApp = () => (dispatch: any) => {
+export const initializeApp = () => (dispatch:any) => {
     let promise = dispatch(authentication());
     promise.then(() => {dispatch(initializedSucces())})
     ;
