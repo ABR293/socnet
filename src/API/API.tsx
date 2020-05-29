@@ -1,4 +1,5 @@
-import * as axios from "axios";
+import axios from "axios";
+import {ProfileType, UserType} from "../types"
 
 const instance = axios.create({
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
@@ -6,44 +7,63 @@ const instance = axios.create({
     headers:{"API-KEY":"4614b388-81cd-49ec-9ae3-88531d523857"}
 });
 
+export type GetItemsType = {
+    items: Array<UserType>
+    totalCount: number
+    error: string | null
+}
+
+export enum ResultCodesEnum {
+    Success = 0,
+    Error = 1
+}
+
+export enum ResultCodeForCapctha {
+    CaptchaIsRequired = 10
+}
+
 export const userAPI = {
-    getUsers(curentPage, pageSize) {
+    getUsers(curentPage:number, pageSize:number) {
         return (
-            instance.get(`users?page=${curentPage}&count=${pageSize}`,
+            instance.get<GetItemsType>(`users?page=${curentPage}&count=${pageSize}`,
                 {}).then(response => {
                 return (response.data)
             })
         )
     },
-    unfollowUser(id) {
+    unfollowUser(id:number) {
         return instance.delete(`/follow/${id}`)
     },
 
-    followUser(id) {
+    followUser(id:number) {
         return instance.post(`follow/${id}`)
     },
 
 };
+
+
+
+
 export const ProfileAPI = {
 
-    setProfile(id) {
+    setProfile(id:number) {
         return(
-            instance.get(`profile/${id}`).then(response => {
+            instance.get<ProfileType>(`profile/${id}`).then(response => {
                 return (response.data)
             }))
     },
-    getStatus(id) {
+    getStatus(id:number) {
         return(
-            instance.get(`profile/status/${id}`).then(response => {
+            instance.get<string>(`profile/status/${id}`).then(response => {
                 return (response.data)
             }))
     },
-    updateStatus(status) {
+    updateStatus(status:string) {
         return(
             instance.put(`profile/status`, {status: status} )
         )
     },
-    savePhoto(photo) {
+    savePhoto(photo:any) {
         const formData = new FormData();
         formData.append('image', photo);
 
@@ -53,25 +73,43 @@ export const ProfileAPI = {
             }
         })
     },
-    saveProfile(profile) {
+    saveProfile(profile: ProfileType ) {
 
         return instance.put(`profile`, profile );
     }
 };
 
+
+type LoginResponseType = {
+    data: {
+        userId: number
+    }
+    resultCode: ResultCodesEnum | ResultCodeForCapctha
+    messages: Array<string>
+}
+type AuthMeResponseType = {
+    data: {
+        id: number
+        email: string
+        login: string
+    }
+    resultCode: ResultCodesEnum
+    messages: Array<string>
+}
+
 export const authAPI = {
 
     authMe() {
         return (
-            instance.get('auth/me')
+            instance.get<AuthMeResponseType>('auth/me')
                 .then(response => {
                     return (response.data)
                 })
         )
     },
-    login(email, password, rememberMe = false, captcha=null) {
+    login(email:string, password:string, rememberMe = false, captcha: null | string =null) {
         return (
-            instance.post('auth/login', {email, password, rememberMe, captcha})
+            instance.post<LoginResponseType>('auth/login', {email, password, rememberMe, captcha})
                 .then(response => {
                     return (response.data)
                 })
@@ -95,15 +133,14 @@ export const dialogsAPI = {
     getDialogs(){
         return instance.get(`dialogs/`);
     },
-    getDialog(id){
+    getDialog(id:number){
         return instance.get(`dialogs/${id}/messages`);
     },
-    startChating(id){
+    startChating(id:number){
         return instance.put(`dialogs/${id}`);
     },
-    sendTheMessage(id, message){
+    sendTheMessage(id:number, message:string){
         return instance.post(`dialogs/${id}/messages`,message);
     },
 };
-
 
