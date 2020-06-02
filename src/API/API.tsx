@@ -46,7 +46,7 @@ export const userAPI = {
 
 export const ProfileAPI = {
 
-    setProfile(id:number) {
+    setProfile(id: number | null) {
         return(
             instance.get<ProfileType>(`profile/${id}`).then(response => {
                 return (response.data)

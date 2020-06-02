@@ -47,12 +47,12 @@ export type LoginFormValuesTypeKeys = Extract<keyof LoginFormValuesType, string>
 
 
 export function createField<FormKeysType extends string>(
-    placeholder: string,
+    placeholder: string | undefined,
     name: FormKeysType,
     validators: Array<FieldValidatorType>,
-    component: React.FC,
-    props?: {},
-    text?: ""
+    component: React.FC<WrappedFieldProps>,
+    props: object = {},
+    text: string = ""
 ) {
     return (
         <div>
