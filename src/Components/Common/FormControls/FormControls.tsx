@@ -8,6 +8,8 @@ type FormControlPropsType = {
     meta: WrappedFieldMetaProps
 }
 
+type FormControlType = (params: FormControlPropsType) => React.ReactNodeArray
+
 const FormControl: React.FC<FormControlPropsType> = ({ meta, ...props }) => {
     const hasError = meta.touched && meta.error;
     return (
@@ -41,16 +43,16 @@ export type LoginFormValuesType = {
     captcha: string
 }
 
-export type LoginFormValuesTypeKeys = keyof LoginFormValuesType
+export type LoginFormValuesTypeKeys = Extract<keyof LoginFormValuesType, string>
 
 
-export function createField<LoginFormValuesTypeKeys>(
+export function createField<FormKeysType extends string>(
     placeholder: string,
-    name: LoginFormValuesTypeKeys,
+    name: FormKeysType,
     validators: Array<FieldValidatorType>,
-    component: string | React.FC | React.Component,
-    props: object = {},
-    text: string = ""
+    component: React.FC,
+    props?: {},
+    text?: ""
 ) {
     return (
         <div>
