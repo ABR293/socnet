@@ -1,0 +1,65 @@
+import React, { ReactNode } from 'react';
+import style from './FormControls.module.css';
+import { Field, WrappedFieldProps, WrappedFieldMetaProps } from "redux-form";
+import { FieldValidatorType } from '../../../Utils/Validators/Validators';
+
+
+type FormControlPropsType = {
+    meta: WrappedFieldMetaProps
+}
+
+const FormControl: React.FC<FormControlPropsType> = ({ meta, ...props }) => {
+    const hasError = meta.touched && meta.error;
+    return (
+        <div className={style.formControl + " " + (hasError ? style.error : "")}>
+            <div>
+                {props.children}
+            </div>
+            {hasError && <span>{meta.error}</span>}
+        </div>
+    )
+};
+
+
+export const Textarea: React.FC<WrappedFieldProps> = (props) => {
+    //const { input, meta, child, ...restProps } = props;
+    const { input, meta, ...restProps } = props;
+    return <FormControl {...props}><textarea {...input} {...restProps} /></FormControl>
+};
+
+export const Input: React.FC<WrappedFieldProps> = (props) => {
+    //const { input, meta, child, ...restProps } = props;
+    const { input, meta, ...restProps } = props;
+    return <FormControl {...props}><input {...input} {...restProps} /></FormControl>
+};
+
+
+export type LoginFormValuesType = {
+    email: string
+    password: string
+    rememberMe: boolean
+    captcha: string
+}
+
+export type LoginFormValuesTypeKeys = keyof LoginFormValuesType
+
+
+export function createField<LoginFormValuesTypeKeys>(
+    placeholder: string,
+    name: LoginFormValuesTypeKeys,
+    validators: Array<FieldValidatorType>,
+    component: string | React.FC | React.Component,
+    props: object = {},
+    text: string = ""
+) {
+    return (
+        <div>
+            <Field placeholder={placeholder}
+                name={name}
+                validate={validators}
+                component={component}
+                {...props}
+            /> {text}
+        </div>
+    )
+};
