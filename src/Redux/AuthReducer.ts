@@ -1,4 +1,5 @@
-import {authAPI, securityAPI} from "../API/API"
+import {authAPI} from "../API/AuthAPI"
+import {securityAPI} from "../API/SecurityAPI"
 import {stopSubmit} from "redux-form"
 import { Dispatch } from "redux";
 import { ThunkAction } from "redux-thunk";

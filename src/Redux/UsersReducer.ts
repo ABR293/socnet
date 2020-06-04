@@ -1,4 +1,4 @@
-import {userAPI} from "../API/API";
+import {userAPI} from "../API/UserAPI";
 import { SetAuthUserDataAction } from "./AuthReducer";
 import { Dispatch, ActionCreator } from "redux";
 import { ThunkAction } from "redux-thunk";

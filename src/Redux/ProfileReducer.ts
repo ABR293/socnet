@@ -1,4 +1,4 @@
-import {ProfileAPI} from "../API/API";
+import {ProfileAPI} from "../API/ProfileAPI";
 import {stopSubmit} from "redux-form";
 import { ChangePageActionType } from "./UsersReducer";
 import { AppStateType } from "./Store";

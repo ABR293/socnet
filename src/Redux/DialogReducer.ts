@@ -1,4 +1,4 @@
-import {dialogsAPI} from "../API/API";
+import {dialogsAPI} from "../API/DialogsAPI";
 
 const SEND_MESSAGE = "socNet/dialog/SEND-MESSAGE";
 const CHANGE_MESSAGE_TEXT = "socNet/dialog/CHANGE-MESSAGE-TEXT";
