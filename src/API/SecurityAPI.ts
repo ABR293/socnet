@@ -1,4 +1,4 @@
-import {instance} from "./API"
+import {instance, ResponceType} from "./API"
 
 export const securityAPI = {
     getCaptchaURL(){
